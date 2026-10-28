@@ -352,7 +352,7 @@
   &.has-tags-bg-sky {
     .tag-list {
       .tag-list-item {
-        background-color: rgb(214, 235, 244) !important;
+        background-color: #f1ead9 !important;
 
         &:hover {
           background-color: var(--bg-2) !important;
@@ -1762,7 +1762,7 @@
     max-width: 1800px;
     margin: 0 auto;
     border-radius: 24px;
-    background-color: rgba(214, 235, 244, 1);
+    background-color: #faf8f3;
     margin-top: 60px;
 
     &::before {
@@ -1771,7 +1771,7 @@
 
     .tags-list {
       .tag-list-item {
-        background-color: rgba(214, 235, 244, 1);
+        background-color: #f1ead9;
       }
     }
   }
@@ -1832,7 +1832,7 @@
     max-width: 1800px;
     margin: 0 auto;
     border-radius: 24px;
-    background-color: rgba(214, 235, 244, 1);
+    background-color: #faf8f3;
 
     &::before {
       background-size: contain;

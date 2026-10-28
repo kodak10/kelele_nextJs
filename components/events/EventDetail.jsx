@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-export default function EventDetail({}) {
+export default function EventDetail({ event }) {
   return (
     <div className="tf-container">
       <div className="row">
@@ -174,9 +174,9 @@ export default function EventDetail({}) {
             <div className="event-img">
               <Image
                 className="ls-is-cached lazyloaded"
-                data-src="/images/events/event-7.jpg"
+                data-src={event?.imgSrc || "/images/evenements/01-soiree-afrobeats.jpg"}
                 alt=""
-                src="/images/events/event-7.jpg"
+                src={event?.imgSrc || "/images/evenements/01-soiree-afrobeats.jpg"}
                 width={658}
                 height={480}
               />

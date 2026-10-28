@@ -107,10 +107,6 @@ export default function PopularProviders() {
                           {elm.title}
                         </Link>
                       </h6>
-                      <div className="ratings pb-30">
-                        <i className="icon-check" />
-                        <div className="total">Prestataire certifié (KYC)</div>
-                      </div>
                       <div className="author">Paiement sécurisé via Mobile Money</div>
                       <div className="bottom">
                         <div className="h6 price fw-5">Sur devis</div>

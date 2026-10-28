@@ -25,13 +25,13 @@ export const providerTabs = [
 // Exemples de fiches prestataires
 export const providers = [
   { id: 1, imgSrc: "/images/prestataires/01-dj-sonorisation.jpg", title: "DJ & Sonorisation pour mariages et soirées privées", city: "Abidjan, Côte d'Ivoire", tag: "Certifié", filterCategories: ["DJ & Animation"] },
-  { id: 2, imgSrc: "/images/prestataires/02-animation-mc.jpg", title: "Animation & MC pour événements d'entreprise", city: "Lagos, Nigeria", filterCategories: ["DJ & Animation"] },
+  { id: 2, imgSrc: "/images/prestataires/02-animation-mc.jpg", title: "Animation & MC pour événements d'entreprise", city: "Lagos, Nigeria", tag: "Certifié", filterCategories: ["DJ & Animation"] },
   { id: 3, imgSrc: "/images/prestataires/03-traiteur-buffet.jpg", title: "Traiteur — buffets, cocktails et pièces montées", city: "Abidjan, Côte d'Ivoire", tag: "Certifié", filterCategories: ["Traiteurs & Pâtisserie"] },
-  { id: 4, imgSrc: "/images/prestataires/04-patisserie.jpg", title: "Pâtisserie événementielle sur commande", city: "Lagos, Nigeria", filterCategories: ["Traiteurs & Pâtisserie"] },
+  { id: 4, imgSrc: "/images/prestataires/04-patisserie.jpg", title: "Pâtisserie événementielle sur commande", city: "Lagos, Nigeria", tag: "Certifié", filterCategories: ["Traiteurs & Pâtisserie"] },
   { id: 5, imgSrc: "/images/prestataires/05-decoration-florale.jpg", title: "Décoration florale et scénographie de salle", city: "Abidjan, Côte d'Ivoire", tag: "Certifié", filterCategories: ["Décoration & Scénographie"] },
-  { id: 6, imgSrc: "/images/prestataires/06-photographe-mariage.jpg", title: "Photographe & vidéaste de mariage", city: "Abidjan, Côte d'Ivoire", filterCategories: ["Photo & Vidéo"] },
+  { id: 6, imgSrc: "/images/prestataires/06-photographe-mariage.jpg", title: "Photographe & vidéaste de mariage", city: "Abidjan, Côte d'Ivoire", tag: "Certifié", filterCategories: ["Photo & Vidéo"] },
   { id: 7, imgSrc: "/images/prestataires/07-photo-drone.jpg", title: "Photographe de cérémonies et d'événements", city: "Lagos, Nigeria", tag: "Certifié", filterCategories: ["Photo & Vidéo"] },
-  { id: 8, imgSrc: "/images/prestataires/08-salle-reception.jpg", title: "Salle de réception modulable, jusqu'à 500 invités", city: "Abidjan, Côte d'Ivoire", filterCategories: ["Salles & Lieux"] },
+  { id: 8, imgSrc: "/images/prestataires/08-salle-reception.jpg", title: "Salle de réception modulable, jusqu'à 500 invités", city: "Abidjan, Côte d'Ivoire", tag: "Certifié", filterCategories: ["Salles & Lieux"] },
 ];
 
 // Prestataires vedettes (exemples)
@@ -64,8 +64,8 @@ export const keleleTestimonials = [
 // Prestataires supplémentaires pour couvrir toutes les catégories (exemples)
 providers.push(
   { id: 9, imgSrc: "/images/prestataires/09-event-planner.jpg", title: "Organisation clé en main de mariages et réceptions", city: "Abidjan, Côte d'Ivoire", tag: "Certifié", filterCategories: ["Event planners"] },
-  { id: 10, imgSrc: "/images/prestataires/10-agence-mice.jpg", title: "Agence événementielle pour séminaires et événements MICE", city: "Lagos, Nigeria", filterCategories: ["Event planners"] },
-  { id: 11, imgSrc: "/images/prestataires/11-groupe-live.jpg", title: "Groupe de musique live et chanteurs pour cérémonies", city: "Abidjan, Côte d'Ivoire", filterCategories: ["Artistes & Musique live"] },
+  { id: 10, imgSrc: "/images/prestataires/10-agence-mice.jpg", title: "Agence événementielle pour séminaires et événements MICE", city: "Lagos, Nigeria", tag: "Certifié", filterCategories: ["Event planners"] },
+  { id: 11, imgSrc: "/images/prestataires/11-groupe-live.jpg", title: "Groupe de musique live et chanteurs pour cérémonies", city: "Abidjan, Côte d'Ivoire", tag: "Certifié", filterCategories: ["Artistes & Musique live"] },
   { id: 12, imgSrc: "/images/prestataires/12-billetterie-concert.jpg", title: "Billetterie et contrôle d'accès par QR code", city: "Lagos, Nigeria", tag: "Certifié", filterCategories: ["Billetterie & Concerts"] }
 );
 
@@ -75,12 +75,12 @@ export const providerCities = ["Abidjan, Côte d'Ivoire", "Lagos, Nigeria"];
 export const keleleEventCategories = ["Mariage", "Concert", "Conférence (MICE)", "Salon"];
 export const keleleEventLocations = ["Abidjan, Côte d'Ivoire", "Lagos, Nigeria", "Dakar, Sénégal"];
 export const keleleEventsAll = [
-  { id: 6, imgSrc: "/images/events/event-1.jpg", date: { day: "12", month: "Déc" }, location: "Abidjan, Côte d'Ivoire", time: "20:00 - 02:00", title: "Soirée Afrobeats (exemple d'événement avec billetterie)", filterCategories: ["Concert"], wowDelay: "0s" },
-  { id: 7, imgSrc: "/images/events/event-2.jpg", date: { day: "19", month: "Déc" }, location: "Lagos, Nigeria", time: "10:00 - 18:00", title: "Salon du mariage et de l'événementiel", filterCategories: ["Salon", "Mariage"], wowDelay: "0.1s" },
-  { id: 8, imgSrc: "/images/events/event-3.jpg", date: { day: "15", month: "Jan" }, location: "Abidjan, Côte d'Ivoire", time: "09:00 - 17:00", title: "Conférence d'entreprise (exemple MICE)", filterCategories: ["Conférence (MICE)"], wowDelay: "0.2s" },
-  { id: 9, imgSrc: "/images/events/event-4.jpg", date: { day: "30", month: "Jan" }, location: "Dakar, Sénégal", time: "19:00 - 23:00", title: "Concert live (prochaine extension)", filterCategories: ["Concert"], wowDelay: "0.3s" },
-  { id: 10, imgSrc: "/images/events/event-5.jpg", date: { day: "07", month: "Fév" }, location: "Abidjan, Côte d'Ivoire", time: "11:00 - 19:00", title: "Cérémonie de mariage sur invitation (exemple)", filterCategories: ["Mariage"], wowDelay: "0.4s" },
-  { id: 11, imgSrc: "/images/events/event-6.jpg", date: { day: "21", month: "Fév" }, location: "Lagos, Nigeria", time: "08:30 - 16:30", title: "Forum des organisateurs et prestataires (exemple)", filterCategories: ["Conférence (MICE)", "Salon"], wowDelay: "0.5s" },
+  { id: 6, imgSrc: "/images/evenements/01-soiree-afrobeats.jpg", date: { day: "12", month: "Déc" }, location: "Abidjan, Côte d'Ivoire", time: "20:00 - 02:00", title: "Soirée Afrobeats (exemple d'événement avec billetterie)", filterCategories: ["Concert"], wowDelay: "0s" },
+  { id: 7, imgSrc: "/images/evenements/02-salon-mariage.jpg", date: { day: "19", month: "Déc" }, location: "Lagos, Nigeria", time: "10:00 - 18:00", title: "Salon du mariage et de l'événementiel", filterCategories: ["Salon", "Mariage"], wowDelay: "0.1s" },
+  { id: 8, imgSrc: "/images/evenements/03-conference.jpg", date: { day: "15", month: "Jan" }, location: "Abidjan, Côte d'Ivoire", time: "09:00 - 17:00", title: "Conférence d'entreprise (exemple MICE)", filterCategories: ["Conférence (MICE)"], wowDelay: "0.2s" },
+  { id: 9, imgSrc: "/images/evenements/04-concert-live.jpg", date: { day: "30", month: "Jan" }, location: "Dakar, Sénégal", time: "19:00 - 23:00", title: "Concert live (prochaine extension)", filterCategories: ["Concert"], wowDelay: "0.3s" },
+  { id: 10, imgSrc: "/images/evenements/05-ceremonie-mariage.jpg", date: { day: "07", month: "Fév" }, location: "Abidjan, Côte d'Ivoire", time: "11:00 - 19:00", title: "Cérémonie de mariage sur invitation (exemple)", filterCategories: ["Mariage"], wowDelay: "0.4s" },
+  { id: 11, imgSrc: "/images/evenements/06-forum-organisateurs.jpg", date: { day: "21", month: "Fév" }, location: "Lagos, Nigeria", time: "08:30 - 16:30", title: "Forum des organisateurs et prestataires (exemple)", filterCategories: ["Conférence (MICE)", "Salon"], wowDelay: "0.5s" },
 ];
 
 // Slugs lisibles pour les URL des fiches : /prestataires/<slug>

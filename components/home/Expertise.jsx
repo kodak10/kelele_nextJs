@@ -23,9 +23,9 @@ export default function Expertise() {
                     <li className="agent-img-item">
                       <Image
                         className="lazyload"
-                        data-src="/images/avatar/prestataire-1.svg"
+                        data-src="/images/avatar/portrait-1.jpg"
                         alt=""
-                        src="/images/avatar/prestataire-1.svg"
+                        src="/images/avatar/portrait-1.jpg"
                         width={84}
                         height={84}
                       />
@@ -33,9 +33,9 @@ export default function Expertise() {
                     <li className="agent-img-item">
                       <Image
                         className="lazyload"
-                        data-src="/images/avatar/prestataire-2.svg"
+                        data-src="/images/avatar/portrait-2.jpg"
                         alt=""
-                        src="/images/avatar/prestataire-2.svg"
+                        src="/images/avatar/portrait-2.jpg"
                         width={84}
                         height={84}
                       />
@@ -43,9 +43,9 @@ export default function Expertise() {
                     <li className="agent-img-item">
                       <Image
                         className="lazyload"
-                        data-src="/images/avatar/prestataire-3.svg"
+                        data-src="/images/avatar/portrait-3.jpg"
                         alt=""
-                        src="/images/avatar/prestataire-3.svg"
+                        src="/images/avatar/portrait-3.jpg"
                         width={84}
                         height={84}
                       />
@@ -71,11 +71,11 @@ export default function Expertise() {
                 <div className="image">
                   <Image
                     className="lazyload"
-                    data-src="/images/page-title/page-title-home2-2.jpg"
-                    alt=""
-                    src="/images/page-title/page-title-home2-2.jpg"
-                    width={592}
-                    height={681}
+                    data-src="/images/about/mariage.jpg"
+                    alt="Mariage"
+                    src="/images/about/mariage.jpg"
+                    width={800}
+                    height={920}
                   />
                 </div>
               </div>
@@ -258,7 +258,7 @@ export default function Expertise() {
                     <g clipPath="url(#clip0_127_1424)">
                       <path
                         d="M23.6475 8.58945V11.7H6.00934C5.12145 11.7 4.40051 12.4269 4.40051 13.3148V26.162H1.29004V10.1984C1.29004 9.31648 2.01105 8.58945 2.89887 8.58945H23.6475Z"
-                        fill="#FFEFEA"
+                        fill="#faf8f3"
                       />
                       <path
                         d="M39.4266 19.4643V34.552C39.4266 35.3982 38.7413 36.0834 37.9012 36.0834H31.5133L26.1922 39.033V36.0834H18.2788V32.4069H34.2246C35.0707 32.4069 35.7561 31.7276 35.7561 30.8814V19.4643H39.4266Z"

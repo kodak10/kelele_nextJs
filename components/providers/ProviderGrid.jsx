@@ -153,10 +153,6 @@ export default function ProviderGrid() {
                       <h6 className="fw-5 line-clamp-2">
                         <Link href={providerHref(elm)}>{elm.title}</Link>
                       </h6>
-                      <div className="ratings pb-30">
-                        <i className="icon-check" />
-                        <div className="total">Prestataire certifié (KYC)</div>
-                      </div>
                       <div className="author">
                         {elm.filterCategories.join(", ")}
                       </div>

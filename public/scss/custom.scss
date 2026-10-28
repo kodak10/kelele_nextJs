@@ -325,3 +325,55 @@
 .section-saying.kelele-saying.bg-4 {
   background-color: #faf8f3 !important;
 }
+
+/* Cartes prestataires : prix, panier et lien sur une seule ligne */
+.course-item.kelele-course .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: nowrap;
+  .price {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .tf-btn-arrow {
+    white-space: nowrap;
+    margin-left: auto;
+    span {
+      font-size: 14px;
+    }
+  }
+}
+.course-item.kelele-course h6 a {
+  text-decoration: none;
+}
+
+/* Cartes d'événements : photo pleine largeur, infos sur une ligne */
+.kelele-events .events-item.style2 {
+  overflow: hidden;
+  .event-item-img {
+    width: 100%;
+    max-width: none;
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .event-item-date {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      margin: 0;
+      padding: 10px 16px;
+      border-radius: 10px;
+    }
+  }
+  .event-item-sub {
+    flex-wrap: wrap;
+    gap: 6px 16px;
+  }
+}
