@@ -6,17 +6,13 @@ import Link from "next/link";
 import React from "react";
 
 export const metadata = {
-  title:
-    "Page Not Found || UpSkill - Education Online Courses LMS React Nextjs Template",
-  description: "UpSkill - Education Online Courses LMS React Nextjs Template",
+  title: "Page introuvable || KELELE",
+  description: "La page demandée est introuvable.",
 };
 export default function page() {
   return (
     <>
       <div id="wrapper">
-        {/* <div className="tf-top-bar flex items-center justify-center">
-          <p>Intro price. Get UpSkill for Big Sale -95% off.</p>
-        </div> */}
 
         <Header1 />
 
@@ -39,13 +35,12 @@ export default function page() {
                 </div>
                 <div className="col-lg-4 flex items-center">
                   <div className="errors-404-content">
-                    <h3>Oops! It looks like you're lost.</h3>
+                    <h3>Oups ! Vous semblez perdu.</h3>
                     <p>
-                      The page you're looking for isn't available. Try to search
-                      again or use the go to.
+                      La page que vous cherchez n'existe pas ou a été déplacée. Retournez à l'accueil ou utilisez la recherche.
                     </p>
                     <Link className="tf-btn" href={`/`}>
-                      Go Back To Homepage <i className="icon-arrow-top-right" />
+                      Retour à l'accueil <i className="icon-arrow-top-right" />
                     </Link>
                   </div>
                 </div>

@@ -4,7 +4,7 @@ export const menuItems = [
     delay: "0.2s",
     links: [
       { name: "À propos", href: "/a-propos" },
-      { name: "Prestataires", href: "/annuaire" },
+      { name: "Prestataires", href: "/prestataires" },
       { name: "Organisateurs", href: "/prestataires" },
       { name: "Événements", href: "/evenements" },
       { name: "Devenir prestataire", href: "/devenir-prestataire" },

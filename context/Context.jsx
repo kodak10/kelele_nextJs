@@ -1,34 +1,52 @@
 "use client";
-import { shopItems } from "@/data/products";
-import React, { useEffect } from "react";
-import { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+
 const dataContext = React.createContext();
-export const useContextElement = () => {
-  return useContext(dataContext);
-};
+export const useContextElement = () => useContext(dataContext);
+
+const CART_KEY = "kelele:cart";
+const WISHLIST_KEY = "kelele:wishlist";
+
+function readJson(key) {
+  try {
+    const raw = JSON.parse(localStorage.getItem(key));
+    return Array.isArray(raw) ? raw : null;
+  } catch (e) {
+    return null;
+  }
+}
 
 export default function Context({ children }) {
-  const [cartProducts, setCartProducts] = useState([]);
-  const [wishList, setWishList] = useState([]);
-  const [quickViewItem, setQuickViewItem] = useState(shopItems[0]);
-  const [totalPrice, setTotalPrice] = useState(0);
-
-  // Panier de prestations KELELE (stocké dans le navigateur)
+  // Panier de prestations (stocké dans le navigateur)
   const [cartServices, setCartServices] = useState([]);
   const [cartLoaded, setCartLoaded] = useState(false);
+  // Favoris
+  const [wishList, setWishList] = useState([]);
+  const [wishLoaded, setWishLoaded] = useState(false);
+
   useEffect(() => {
-    try {
-      const raw = JSON.parse(localStorage.getItem("kelele:cart"));
-      if (Array.isArray(raw)) setCartServices(raw);
-    } catch (e) {}
+    const cart = readJson(CART_KEY);
+    if (cart) setCartServices(cart);
     setCartLoaded(true);
+    const wish = readJson(WISHLIST_KEY);
+    if (wish) setWishList(wish);
+    setWishLoaded(true);
   }, []);
+
   useEffect(() => {
     if (!cartLoaded) return;
     try {
-      localStorage.setItem("kelele:cart", JSON.stringify(cartServices));
+      localStorage.setItem(CART_KEY, JSON.stringify(cartServices));
     } catch (e) {}
   }, [cartServices, cartLoaded]);
+
+  useEffect(() => {
+    if (!wishLoaded) return;
+    try {
+      localStorage.setItem(WISHLIST_KEY, JSON.stringify(wishList));
+    } catch (e) {}
+  }, [wishList, wishLoaded]);
+
   const isServiceInCart = (id) => cartServices.some((x) => x.id === id);
   const addServiceToCart = (p) => {
     if (isServiceInCart(p.id)) return;
@@ -51,62 +69,10 @@ export default function Context({ children }) {
   const updateServiceInCart = (id, patch) =>
     setCartServices((pre) => pre.map((x) => (x.id === id ? { ...x, ...patch } : x)));
   const clearServiceCart = () => setCartServices([]);
-  useEffect(() => {
-    const subtotal = cartProducts.reduce((accumulator, product) => {
-      return accumulator + product.quantity * product.price;
-    }, 0);
-    setTotalPrice(subtotal);
-  }, [cartProducts]);
 
-  const addProductToCart = (id) => {
-    if (!cartProducts.filter((elm) => elm.id == id)[0]) {
-      const item = {
-        ...shopItems.filter((elm) => elm.id == id)[0],
-        quantity: 1,
-      };
-      setCartProducts((pre) => [...pre, item]);
-    }
-  };
-  const isAddedToCartProducts = (id) => {
-    if (cartProducts.filter((elm) => elm.id == id)[0]) {
-      return true;
-    }
-    return false;
-  };
-
-  const toggleWishlist = (id) => {
-    if (wishList.includes(id)) {
-      setWishList((pre) => [...pre.filter((elm) => elm != id)]);
-    } else {
-      setWishList((pre) => [...pre, id]);
-    }
-  };
-  const isAddedtoWishlist = (id) => {
-    if (wishList.includes(id)) {
-      return true;
-    }
-    return false;
-  };
-  useEffect(() => {
-    const items = JSON.parse(localStorage.getItem("cartList"));
-    if (items?.length) {
-      setCartProducts(items);
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("cartList", JSON.stringify(cartProducts));
-  }, [cartProducts]);
-  useEffect(() => {
-    const items = JSON.parse(localStorage.getItem("wishlist"));
-    if (items?.length) {
-      setWishList(items);
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("wishlist", JSON.stringify(wishList));
-  }, [wishList]);
+  const toggleWishlist = (id) =>
+    setWishList((pre) => (pre.includes(id) ? pre.filter((x) => x !== id) : [...pre, id]));
+  const isAddedtoWishlist = (id) => wishList.includes(id);
 
   const contextElement = {
     cartServices,
@@ -115,20 +81,9 @@ export default function Context({ children }) {
     updateServiceInCart,
     clearServiceCart,
     isServiceInCart,
-    cartProducts,
-    setCartProducts,
-    totalPrice,
-    addProductToCart,
-    isAddedToCartProducts,
+    wishList,
     toggleWishlist,
     isAddedtoWishlist,
-    quickViewItem,
-    wishList,
-    setQuickViewItem,
   };
-  return (
-    <dataContext.Provider value={contextElement}>
-      {children}
-    </dataContext.Provider>
-  );
+  return <dataContext.Provider value={contextElement}>{children}</dataContext.Provider>;
 }

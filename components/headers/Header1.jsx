@@ -1,10 +1,10 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import Nav from "./Nav";
+import Nav from "@/components/headers/Nav";
 import Link from "next/link";
 import Image from "next/image";
-import Categories from "./Categories";
-import MobileNav from "./MobileNav";
+import Categories from "@/components/headers/Categories";
+import MobileNav from "@/components/headers/MobileNav";
 import { useContextElement } from "@/context/Context";
 export default function Header1() {
   const { cartServices } = useContextElement();

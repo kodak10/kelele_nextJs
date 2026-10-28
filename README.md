@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# KELELE
 
-## Getting Started
+La super-application de l'écosystème événementiel africain : prestataires certifiés,
+devis, paiement Mobile Money et billetterie QR code. Lancement prévu à Abidjan et Lagos.
 
-First, run the development server:
+Le périmètre fonctionnel est décrit dans [docs/KELELE-proposition-technique.pdf](docs/KELELE-proposition-technique.pdf).
+
+## Technologies
+
+- [Next.js 14](https://nextjs.org) (App Router) et React 18
+- Bootstrap 5, Swiper, SASS
+- Données et authentification **simulées** pour l'instant (aucune API branchée)
+
+## Démarrer
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
+npm run build      # build de production
+npm start          # serveur de production
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Pour tester depuis un autre appareil du réseau : `npm run dev -- -H 0.0.0.0`.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Pages
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Route | Contenu |
+|---|---|
+| `/` | Accueil : recherche, catégories, prestataires, événements |
+| `/prestataires` | Annuaire (recherche, filtres catégorie et ville) |
+| `/prestataires/[slug]` | Fiche prestataire, demande de devis, ajout au panier |
+| `/evenements`, `/evenements/[slug]` | Événements et billetterie |
+| `/panier`, `/demande-devis` | Panier de prestations et demande de devis groupée |
+| `/connexion`, `/inscription` | Authentification (accès rapide de démonstration) |
+| `/espace/[role]` | Tableaux de bord : `client`, `prestataire`, `organisateur`, `admin` |
+| `/a-propos`, `/contact`, `/faq`, `/tarifs`, `/conditions`, `/devenir-prestataire` | Pages d'information |
 
-## Learn More
+## Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/            routes (App Router)
+components/     composants (home, providers, events, cart, dashboard, auth, pages, headers, footers, modals)
+context/        panier de prestations et favoris
+data/           contenu : catalogue, menu, tableaux de bord
+public/         images, polices, icônes, feuilles de style (SCSS)
+docs/           documentation du projet
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Mode démonstration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Tant que l'API n'est pas branchée, les données saisies (services, événements, dossiers KYC,
+catégories, panier, demandes de devis) sont enregistrées dans le **navigateur** (`localStorage`,
+clés `kelele:*`). L'admin voit donc ce que soumettent les autres espaces **sur le même navigateur**.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Les textes marqués « exemple » (prestataires, événements, témoignages) et les coordonnées de
+contact sont des contenus provisoires à remplacer.

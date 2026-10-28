@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
-import "../public/scss/main.scss";
+import "@/public/scss/main.scss";
 import "swiper/css/effect-fade";
 
-import { tabs } from "@/utlis/tabs";
+import { tabs } from "@/utils/tabs";
 import { usePathname } from "next/navigation";
 import SearchModal from "@/components/modals/SearchModal";
 import MobileMenu from "@/components/modals/MobileMenu";
@@ -14,16 +14,8 @@ export default function RootLayout({ children }) {
   const pathname = usePathname();
   useEffect(() => {
     if (typeof window !== "undefined") {
-      // Import the script only on the client side
-      import("bootstrap/dist/js/bootstrap.esm").then(() => {
-        // Module is imported, you can access any exported functionality if
-      });
-      // setTimeout(() => {
-      //   import("../utlis/mmenu").then(() => {
-      //     // Module is imported, you can access any exported functionality if
-      //     new window.Mmenu(document.querySelector("#menu"));
-      //   });
-      // }, 200);
+      // JS Bootstrap (dropdowns, collapse, offcanvas) chargé côté client uniquement
+      import("bootstrap/dist/js/bootstrap.esm");
     }
   }, []);
   useEffect(() => {

@@ -1,4 +1,4 @@
-// Contenu KELELE (home-1) — source : proposition technique KELELE (sept. 2026).
+// Contenu KELELE — source : proposition technique KELELE (sept. 2026).
 // Les éléments marqués "exemple" sont des placeholders à remplacer par des données réelles.
 
 export const keleleCategories = [
@@ -12,13 +12,6 @@ export const keleleCategories = [
   { imgSrc: "/images/categories/kelele/billetterie-concerts.svg", category: "Billetterie & Concerts", delay: "0.47s" },
 ];
 
-export const keleleAcademic = [
-  { href: "/prestataires", imgSrc: "/images/section/academisc-1.jpg", text: "Mariages <br /> & Cérémonies" },
-  { href: "/prestataires", imgSrc: "/images/section/academisc-2.jpg", text: "Anniversaires & Fêtes privées" },
-  { href: "/prestataires", imgSrc: "/images/section/academisc-3.jpg", text: "Conférences & Événements MICE" },
-  { href: "/prestataires", imgSrc: "/images/section/academisc-4.jpg", text: "Concerts & <br /> Billetterie" },
-  { href: "/prestataires", imgSrc: "/images/section/academisc-5.jpg", text: "Diaspora : organisez <br /> à distance" },
-];
 
 // Onglets de la section "Prestataires populaires"
 export const providerTabs = [

@@ -1,10 +1,10 @@
-// Menu principal KELELE (desktop + mobile). Les routes du template sont conservées.
+// Menu principal KELELE (desktop + mobile).
 const grid = "/prestataires";
 const cat = (name) => `${grid}?category=${encodeURIComponent(name)}`;
 
 export const menuItems = [
   { title: "Accueil", href: "/" },
-  { title: "Prestataires", href: "/annuaire" },
+  { title: "Prestataires", href: "/prestataires" },
   { title: "Événements", href: "/evenements" },
   {
     title: "Pages",

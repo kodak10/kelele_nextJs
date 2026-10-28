@@ -1,0 +1,241 @@
+$kelele-icons-font: "kelele-icons";
+
+@font-face {
+    font-family: $kelele-icons-font;
+    src: url("./kelele-icons.woff2?1d176a009382925afbfd522a182a8e9b") format("woff2"),
+url("./kelele-icons.woff?1d176a009382925afbfd522a182a8e9b") format("woff"),
+url("./kelele-icons.eot?1d176a009382925afbfd522a182a8e9b#iefix") format("embedded-opentype"),
+url("./kelele-icons.ttf?1d176a009382925afbfd522a182a8e9b") format("truetype"),
+url("./kelele-icons.svg?1d176a009382925afbfd522a182a8e9b#kelele-icons") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: kelele-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$kelele-icons-map: (
+    "heart": "\f101",
+    "user": "\f102",
+    "clock": "\f103",
+    "book": "\f104",
+    "play": "\f105",
+    "calendar": "\f106",
+    "message": "\f107",
+    "user-1": "\f108",
+    "facebook": "\f109",
+    "instagram": "\f10a",
+    "linkedin": "\f10b",
+    "facebook-1": "\f10c",
+    "call": "\f10d",
+    "mail-1": "\f10e",
+    "location": "\f10f",
+    "linkedin-1": "\f110",
+    "graduation": "\f111",
+    "online-training": "\f112",
+    "octagon": "\f113",
+    "award": "\f114",
+    "key": "\f115",
+    "check": "\f116",
+    "mic": "\f117",
+    "baby-boy": "\f118",
+    "setting": "\f119",
+    "home": "\f11a",
+    "play-1": "\f11b",
+    "document": "\f11c",
+    "question": "\f11d",
+    "lock": "\f11e",
+    "down-arrow": "\f11f",
+    "mobile-phone": "\f120",
+    "medal": "\f121",
+    "close": "\f122",
+    "activity": "\f123",
+    "message-1": "\f124",
+    "bag": "\f125",
+    "setting-1": "\f126",
+    "export": "\f127",
+    "edit": "\f128",
+    "video": "\f129",
+    "alarm": "\f12a",
+    "play-2": "\f12b",
+    "user-2": "\f12c",
+    "send": "\f12d",
+    "eye": "\f12e",
+    "cart": "\f12f",
+    "programming": "\f130",
+    "dollar": "\f131",
+    "unlock": "\f132",
+    "arrow-up": "\f133",
+    "report": "\f134",
+    "buy": "\f135",
+    "close-1": "\f136",
+);
+
+.flaticon-heart:before {
+    content: map-get($kelele-icons-map, "heart");
+}
+.flaticon-user:before {
+    content: map-get($kelele-icons-map, "user");
+}
+.flaticon-clock:before {
+    content: map-get($kelele-icons-map, "clock");
+}
+.flaticon-book:before {
+    content: map-get($kelele-icons-map, "book");
+}
+.flaticon-play:before {
+    content: map-get($kelele-icons-map, "play");
+}
+.flaticon-calendar:before {
+    content: map-get($kelele-icons-map, "calendar");
+}
+.flaticon-message:before {
+    content: map-get($kelele-icons-map, "message");
+}
+.flaticon-user-1:before {
+    content: map-get($kelele-icons-map, "user-1");
+}
+.flaticon-facebook:before {
+    content: map-get($kelele-icons-map, "facebook");
+}
+.flaticon-instagram:before {
+    content: map-get($kelele-icons-map, "instagram");
+}
+.flaticon-linkedin:before {
+    content: map-get($kelele-icons-map, "linkedin");
+}
+.flaticon-facebook-1:before {
+    content: map-get($kelele-icons-map, "facebook-1");
+}
+.flaticon-call:before {
+    content: map-get($kelele-icons-map, "call");
+}
+.flaticon-mail-1:before {
+    content: map-get($kelele-icons-map, "mail-1");
+}
+.flaticon-location:before {
+    content: map-get($kelele-icons-map, "location");
+}
+.flaticon-linkedin-1:before {
+    content: map-get($kelele-icons-map, "linkedin-1");
+}
+.flaticon-graduation:before {
+    content: map-get($kelele-icons-map, "graduation");
+}
+.flaticon-online-training:before {
+    content: map-get($kelele-icons-map, "online-training");
+}
+.flaticon-octagon:before {
+    content: map-get($kelele-icons-map, "octagon");
+}
+.flaticon-award:before {
+    content: map-get($kelele-icons-map, "award");
+}
+.flaticon-key:before {
+    content: map-get($kelele-icons-map, "key");
+}
+.flaticon-check:before {
+    content: map-get($kelele-icons-map, "check");
+}
+.flaticon-mic:before {
+    content: map-get($kelele-icons-map, "mic");
+}
+.flaticon-baby-boy:before {
+    content: map-get($kelele-icons-map, "baby-boy");
+}
+.flaticon-setting:before {
+    content: map-get($kelele-icons-map, "setting");
+}
+.flaticon-home:before {
+    content: map-get($kelele-icons-map, "home");
+}
+.flaticon-play-1:before {
+    content: map-get($kelele-icons-map, "play-1");
+}
+.flaticon-document:before {
+    content: map-get($kelele-icons-map, "document");
+}
+.flaticon-question:before {
+    content: map-get($kelele-icons-map, "question");
+}
+.flaticon-lock:before {
+    content: map-get($kelele-icons-map, "lock");
+}
+.flaticon-down-arrow:before {
+    content: map-get($kelele-icons-map, "down-arrow");
+}
+.flaticon-mobile-phone:before {
+    content: map-get($kelele-icons-map, "mobile-phone");
+}
+.flaticon-medal:before {
+    content: map-get($kelele-icons-map, "medal");
+}
+.flaticon-close:before {
+    content: map-get($kelele-icons-map, "close");
+}
+.flaticon-activity:before {
+    content: map-get($kelele-icons-map, "activity");
+}
+.flaticon-message-1:before {
+    content: map-get($kelele-icons-map, "message-1");
+}
+.flaticon-bag:before {
+    content: map-get($kelele-icons-map, "bag");
+}
+.flaticon-setting-1:before {
+    content: map-get($kelele-icons-map, "setting-1");
+}
+.flaticon-export:before {
+    content: map-get($kelele-icons-map, "export");
+}
+.flaticon-edit:before {
+    content: map-get($kelele-icons-map, "edit");
+}
+.flaticon-video:before {
+    content: map-get($kelele-icons-map, "video");
+}
+.flaticon-alarm:before {
+    content: map-get($kelele-icons-map, "alarm");
+}
+.flaticon-play-2:before {
+    content: map-get($kelele-icons-map, "play-2");
+}
+.flaticon-user-2:before {
+    content: map-get($kelele-icons-map, "user-2");
+}
+.flaticon-send:before {
+    content: map-get($kelele-icons-map, "send");
+}
+.flaticon-eye:before {
+    content: map-get($kelele-icons-map, "eye");
+}
+.flaticon-cart:before {
+    content: map-get($kelele-icons-map, "cart");
+}
+.flaticon-programming:before {
+    content: map-get($kelele-icons-map, "programming");
+}
+.flaticon-dollar:before {
+    content: map-get($kelele-icons-map, "dollar");
+}
+.flaticon-unlock:before {
+    content: map-get($kelele-icons-map, "unlock");
+}
+.flaticon-arrow-up:before {
+    content: map-get($kelele-icons-map, "arrow-up");
+}
+.flaticon-report:before {
+    content: map-get($kelele-icons-map, "report");
+}
+.flaticon-buy:before {
+    content: map-get($kelele-icons-map, "buy");
+}
+.flaticon-close-1:before {
+    content: map-get($kelele-icons-map, "close-1");
+}

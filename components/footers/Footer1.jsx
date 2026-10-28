@@ -2,7 +2,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import { menuItems, socialLinks } from "@/data/footerLinks";
 export default function Footer1({ parentClass = "footer" }) {
@@ -17,22 +16,19 @@ export default function Footer1({ parentClass = "footer" }) {
     }, 2000);
   };
 
+  // Inscription à la newsletter : enregistrée dans le navigateur en attendant l'API.
   const sendMail = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm("service_noj8796", "template_fs3xchn", formRef.current, {
-        publicKey: "iG4SCmR-YtJagQ4gV",
-      })
-      .then((res) => {
-        if (res.status === 200) {
-          setSuccess(true);
-          handleShowMessage();
-          formRef.current.reset();
-        } else {
-          setSuccess(false);
-          handleShowMessage();
-        }
-      });
+    const email = new FormData(formRef.current).get("email");
+    try {
+      const prev = JSON.parse(localStorage.getItem("kelele:newsletter")) || [];
+      localStorage.setItem("kelele:newsletter", JSON.stringify([...prev, { email, date: new Date().toISOString() }]));
+      setSuccess(true);
+    } catch (err) {
+      setSuccess(false);
+    }
+    handleShowMessage();
+    formRef.current.reset();
   };
   return (
     <footer id="footer" className={parentClass}>
@@ -125,10 +121,10 @@ export default function Footer1({ parentClass = "footer" }) {
                     >
                       {success ? (
                         <p style={{ color: "rgb(52, 168, 83)" }}>
-                          You have successfully subscribed.
+                          Merci, vous êtes bien inscrit(e).
                         </p>
                       ) : (
-                        <p style={{ color: "red" }}>Something went wrong</p>
+                        <p style={{ color: "red" }}>Une erreur est survenue</p>
                       )}
                     </div>
                     <form
@@ -139,7 +135,7 @@ export default function Footer1({ parentClass = "footer" }) {
                       <fieldset className="email">
                         <input
                           type="email"
-                          placeholder="Your e-mail"
+                          placeholder="Votre e-mail"
                           className="style-default"
                           name="email"
                           tabIndex={2}
@@ -163,7 +159,7 @@ export default function Footer1({ parentClass = "footer" }) {
                             <i className="icon-apple" />
                           </div>
                           <div className="app">
-                            <div>Download on the</div>
+                            <div>Télécharger sur</div>
                             <div>Apple Store</div>
                           </div>
                         </a>
@@ -174,7 +170,7 @@ export default function Footer1({ parentClass = "footer" }) {
                             <i className="icon-chplay" />
                           </div>
                           <div className="app">
-                            <div>Get in on</div>
+                            <div>Disponible sur</div>
                             <div>Google Play</div>
                           </div>
                         </a>
