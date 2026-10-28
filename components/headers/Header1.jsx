@@ -9,7 +9,7 @@ import { useContextElement } from "@/context/Context";
 export default function Header1() {
   const { cartServices } = useContextElement();
   return (
-    <header id="header_main" className="header">
+    <header id="header_main" className="header kelele-header">
       <div className="header-inner">
         <div className="header-inner-wrap">
           <div className="header-left flex-grow">
@@ -24,10 +24,10 @@ export default function Header1() {
               <Link href={`/`} rel="home">
                 <Image
                   id="logo-header"
-                  alt=""
-                  src="/images/logo/logo.svg"
-                  width={123}
-                  height={36}
+                  alt="KELELE"
+                  src="/images/logo/logo.png"
+                  width={83}
+                  height={56}
                 />
               </Link>
             </div>
@@ -99,7 +99,7 @@ export default function Header1() {
                     height: 18,
                     padding: "0 5px",
                     borderRadius: 999,
-                    background: "var(--Secondary, #e0754a)",
+                    background: "var(--Secondary, #c9a84c)",
                     color: "#fff",
                     fontSize: 11,
                     fontWeight: 600,

@@ -77,24 +77,9 @@ export default function RootLayout({ children }) {
   useEffect(() => {
     const header = document.querySelector("header");
 
+    // Header fixe : toujours visible au défilement
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      if (header) {
-        if (currentScrollY > 250) {
-          if (currentScrollY > lastScrollY.current) {
-            // Scrolling down
-            header.style.top = "-100px";
-          } else {
-            // Scrolling up
-            header.style.top = "0px";
-          }
-        } else {
-          // Below 250px
-          header.style.top = "-100px";
-        }
-
-        lastScrollY.current = currentScrollY;
-      }
+      if (header) header.style.top = "0px";
     };
 
     const lastScrollY = { current: window.scrollY };

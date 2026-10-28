@@ -29,9 +29,9 @@ export default function Header3() {
                   <Image
                     id="logo-header"
                     alt=""
-                    src="/images/logo/logo.svg"
-                    width={123}
-                    height={36}
+                    src="/images/logo/logo.png"
+                    width={83}
+                    height={56}
                   />
                 </Link>
               </div>

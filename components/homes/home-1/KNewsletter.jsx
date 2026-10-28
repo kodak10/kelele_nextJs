@@ -3,7 +3,7 @@ import React from "react";
 
 export default function KNewsletter() {
   return (
-    <section className="section-form-newsletter tf-spacing-1 pt-0 pb-0">
+    <section className="section-form-newsletter kelele-newsletter">
       <div className="tf-container">
         <div className="row">
           <div className="col-lg-12">

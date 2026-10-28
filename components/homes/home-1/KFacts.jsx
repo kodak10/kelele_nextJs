@@ -11,11 +11,11 @@ export default function KFacts() {
                 <div className="image">
                   <Image
                     className="lazyload"
-                    data-src="/images/page-title/page-title-home2-1.jpg"
-                    alt=""
-                    src="/images/page-title/page-title-home2-1.jpg"
-                    width={591}
-                    height={680}
+                    data-src="/images/about/Himra.jpg"
+                    alt="Himra"
+                    src="/images/about/Himra.jpg"
+                    width={536}
+                    height={640}
                   />
                 </div>
                 <div className="box-agent">
@@ -23,9 +23,9 @@ export default function KFacts() {
                     <li className="agent-img-item">
                       <Image
                         className="lazyload"
-                        data-src="/images/avatar/user-1.png"
+                        data-src="/images/avatar/prestataire-1.svg"
                         alt=""
-                        src="/images/avatar/user-1.png"
+                        src="/images/avatar/prestataire-1.svg"
                         width={84}
                         height={84}
                       />
@@ -33,9 +33,9 @@ export default function KFacts() {
                     <li className="agent-img-item">
                       <Image
                         className="lazyload"
-                        data-src="/images/avatar/user-2.png"
+                        data-src="/images/avatar/prestataire-2.svg"
                         alt=""
-                        src="/images/avatar/user-2.png"
+                        src="/images/avatar/prestataire-2.svg"
                         width={84}
                         height={84}
                       />
@@ -43,16 +43,16 @@ export default function KFacts() {
                     <li className="agent-img-item">
                       <Image
                         className="lazyload"
-                        data-src="/images/avatar/user-3.png"
+                        data-src="/images/avatar/prestataire-3.svg"
                         alt=""
-                        src="/images/avatar/user-3.png"
+                        src="/images/avatar/prestataire-3.svg"
                         width={84}
                         height={84}
                       />
                     </li>
                   </ul>
                   <div className="content">
-                    <h6 className="fw-5">Prestataires vérifiés</h6>
+                    <h6 className="fw-5">Prestataires certifiés</h6>
                     <p>KYC contrôlé par KELELE</p>
                   </div>
                 </div>
@@ -61,11 +61,11 @@ export default function KFacts() {
                 <div className="image">
                   <Image
                     className="lazyload"
-                    data-src="/images/section/about-1.jpg"
-                    alt=""
-                    src="/images/section/about-1.jpg"
-                    width={681}
-                    height={681}
+                    data-src="/images/about/Didi_B.jpg"
+                    alt="Didi B"
+                    src="/images/about/Didi_B.jpg"
+                    width={640}
+                    height={640}
                   />
                 </div>
                 <div className="image">
@@ -101,7 +101,7 @@ export default function KFacts() {
               <p className="text-content wow fadeInUp" data-wow-delay="0.3s">
                 KELELE connecte clients, prestataires et diaspora autour d'une marketplace sécurisée : recherche, devis, paiement Mobile Money, réservation et billetterie QR code.
               </p>
-              <div className="counter style-2">
+              <div className="counter style-2 kelele-counter">
                 <div
                   className="number-counter wow fadeInUp"
                   data-wow-delay="0.3s"

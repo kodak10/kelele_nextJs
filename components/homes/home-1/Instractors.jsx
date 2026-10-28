@@ -39,7 +39,7 @@ export default function Instractors() {
               </h2>
               <div className="flex items-center justify-between flex-wrap gap-10">
                 <div className="sub fs-15 wow fadeInUp" data-wow-delay="0.1s">
-                  Des professionnels de l'événementiel, vérifiés par KELELE
+                  Des professionnels de l'événementiel, certifiés par KELELE
                 </div>
                 <Link
                   href={`/prestataires`}
@@ -58,7 +58,7 @@ export default function Instractors() {
             >
               {instructors.map((instructor, index) => (
                 <SwiperSlide className="swiper-slide" key={index}>
-                  <div className="instructors-item hover-img style-column">
+                  <div className="instructors-item hover-img style-column kelele-instructor">
                     <div className="image-wrap">
                       <Image
                         className="lazyload"
@@ -77,7 +77,7 @@ export default function Instractors() {
                         </li>
                         <li>
                           <i className="flaticon-play" />
-                          Vérifié (KYC)
+                          Certifié (KYC)
                         </li>
                       </ul>
                       <h6 className="entry-title">

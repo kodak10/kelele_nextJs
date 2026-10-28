@@ -38,7 +38,7 @@ export default function PopularCourses() {
                 </h2>
                 <div className="flex items-center justify-between flex-wrap gap-10">
                   <div className="sub fs-15 wow fadeInUp" data-wow-delay="0.2s">
-                    Des professionnels vérifiés, près de chez vous
+                    Des professionnels certifiés, près de chez vous
                   </div>
                   <ul
                     className="widget-menu-tab overflow-x-auto wow fadeInUp no-tab"
@@ -65,7 +65,7 @@ export default function PopularCourses() {
                 <div className="widget-content-inner active">
                   <div className="grid-layout-4 gap40">
                     {filtered.map((elm, i) => (
-                      <div key={i} className="course-item hover-img title-small">
+                      <div key={i} className="course-item hover-img title-small kelele-course">
                     <div className="features image-wrap">
                       <Image
                         className="lazyload"
@@ -109,7 +109,7 @@ export default function PopularCourses() {
                       </h6>
                       <div className="ratings pb-30">
                         <i className="icon-check" />
-                        <div className="total">Prestataire vérifié (KYC)</div>
+                        <div className="total">Prestataire certifié (KYC)</div>
                       </div>
                       <div className="author">Paiement sécurisé via Mobile Money</div>
                       <div className="bottom">

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { keleleEvents as events2, eventHrefById } from "@/data/kelele";
 export default function KEvents() {
   return (
-    <section className="section-event tf-spacing-11">
+    <section className="section-event tf-spacing-11 kelele-events" style={{ background: "#faf8f3" }}>
       <div className="tf-container">
         <div className="row">
           <div className="col-12">

@@ -206,7 +206,7 @@ export default function Events() {
       </div>
       {/* /top */}
       {/* section instructor */}
-      <section className="section-event tf-spacing-4 pt-0 page-event">
+      <section className="section-event tf-spacing-4 pt-0 page-event kelele-events">
         <div className="tf-container">
           <div className="row">
             <div className="col-12">

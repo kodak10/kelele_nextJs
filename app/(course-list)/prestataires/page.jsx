@@ -7,15 +7,15 @@ import React, { Suspense } from "react";
 export const metadata = {
   title: "Prestataires || KELELE",
   description:
-    "Trouvez des prestataires événementiels vérifiés : DJ, traiteurs, décorateurs, photographes, salles.",
+    "Trouvez des prestataires événementiels certifiés : DJ, traiteurs, décorateurs, photographes, salles.",
 };
 export default function page() {
   return (
     <>
       <div id="wrapper">
-        <div className="tf-top-bar flex items-center justify-center">
+        {/* <div className="tf-top-bar flex items-center justify-center">
           <p>Lancement sur les marchés pilotes : Abidjan et Lagos.</p>
-        </div>
+        </div> */}
 
         <Header1 />
         <div className="page-title style-3 has-tags-bg-sky">
@@ -37,7 +37,7 @@ export default function page() {
                   <h2 className="font-cardo fw-7">Trouvez le bon prestataire</h2>
                   <p>
                     DJ, traiteurs, décorateurs, photographes, salles : comparez
-                    des professionnels vérifiés et demandez un devis.
+                    des professionnels certifiés et demandez un devis.
                   </p>
                 </div>
               </div>

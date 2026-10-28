@@ -4,7 +4,7 @@ import Link from "next/link";
 const reasons = [
   { icon: "flaticon-document", title: "Recevez des demandes de devis", text: "Créez votre fiche et recevez les demandes de clients, d'organisateurs et de la diaspora." },
   { icon: "flaticon-mobile-phone", title: "Encaissez en Mobile Money", text: "Wave, Orange Money, MTN MoMo, M-Pesa ou carte bancaire, via notre partenaire de paiement Pawapay." },
-  { icon: "flaticon-check", title: "Profil vérifié (KYC)", text: "Vos documents sont stockés de façon chiffrée et validés par KELELE pour inspirer confiance." },
+  { icon: "flaticon-check", title: "Profil certifié (KYC)", text: "Vos documents sont stockés de façon chiffrée et validés par KELELE pour inspirer confiance." },
   { icon: "flaticon-medal", title: "Avis et réputation", text: "Les avis sont publiés après chaque prestation honorée et valorisent votre travail." },
 ];
 

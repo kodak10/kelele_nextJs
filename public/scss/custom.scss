@@ -117,3 +117,211 @@
 .tf-sidebar .sidebar-item .showmore-item .d-none {
   display: none !important;
 }
+
+/* Header KELELE : fond bleu nuit #131836 */
+#header_main.kelele-header {
+  border-bottom: 1px solid #131836;
+  .header-inner {
+    background-color: #131836;
+  }
+  .header-text,
+  .navigation > li > a,
+  .header-right > a,
+  .header-cart,
+  .header-cart i,
+  .header-btn .d-lg-none a {
+    color: #fff;
+  }
+  .header-login .tf-button-default {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    color: #fff;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+      color: #fff;
+    }
+  }
+  .header-register .tf-button-default,
+  .header-register .tf-button-default.active {
+    background-color: var(--Secondary);
+    border-color: var(--Secondary);
+    color: #131836;
+    font-weight: 600;
+    &:hover {
+      background-color: #b8973f;
+      border-color: #b8973f;
+      color: #131836;
+    }
+  }
+  .navigation > li.has-children::after {
+    color: #fff;
+  }
+  .navigation > li > a.activeMenu,
+  .navigation > li > a:hover {
+    color: var(--Secondary) !important;
+  }
+  .header-catalog > a {
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+  }
+  .header-catalog:hover > a,
+  .header-catalog:hover > a i {
+    background-color: rgba(255, 255, 255, 0.14);
+    color: #fff;
+  }
+  .mobile-button::before,
+  .mobile-button::after {
+    background-color: #fff;
+  }
+}
+
+/* Compteurs KELELE : icône + chiffre sur la même ligne, libellé dessous */
+.kelele-counter .number-counter {
+  display: grid !important;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: 14px;
+  row-gap: 6px;
+  text-align: left;
+  .counter-content {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+    line-height: 1.1;
+  }
+  > svg,
+  > img {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+  }
+  > p {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin: 0;
+    line-height: 1.5;
+  }
+}
+
+/* Cartes prestataires : toutes les images ont le même cadre (3/2), quelle que soit la photo */
+.course-item.kelele-course .features.image-wrap {
+  aspect-ratio: 3 / 2;
+  height: auto;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/* Date des événements : couleur du header (#131836) */
+.kelele-events .events-item .event-item-date {
+  background-color: #131836;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  h2,
+  h6,
+  .date-text {
+    color: #fff;
+  }
+}
+
+/* Prestataires vedettes : images toutes au même format (4/3) */
+.instructors-item.kelele-instructor .image-wrap {
+  aspect-ratio: 4 / 3;
+  height: auto;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/* Section « Devenez prestataire » */
+.section-become-instructor.kelele-become .main-section {
+  background-color: #faf8f3;
+  align-items: center;
+  .wrap-list-text-check1 {
+    flex-wrap: wrap;
+    gap: 14px 36px;
+    li {
+      margin: 0 !important;
+      flex: 0 0 auto;
+      white-space: nowrap;
+      i {
+        flex: 0 0 22px;
+        width: 22px;
+        height: 22px;
+        line-height: 22px;
+        font-size: 11px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+  .agent-img-list .agent-img-item {
+    width: 64px;
+    height: 64px;
+    padding: 4px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+    }
+  }
+  .agent-img-list .agent-img-item:not(:first-child) {
+    margin-left: -12px;
+  }
+  .agent-img-list .agent-img-item:last-child {
+    overflow: visible;
+    font-weight: 600;
+  }
+}
+
+/* Newsletter : bloc centré avec marges égales en haut et en bas */
+.section-form-newsletter.kelele-newsletter {
+  padding: 0 0 70px;
+  .tf-container,
+  .row,
+  .form-newsletter {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .form-newsletter {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    p {
+      max-width: 640px;
+    }
+    .form-subscribe {
+      margin: 0 auto;
+    }
+  }
+}
+
+/* Réduit l'espace sous « Devenez prestataire » (avant la newsletter) */
+.section-become-instructor.kelele-become {
+  padding-bottom: 50px;
+}
+
+/* « Ce que disent nos utilisateurs » : même fond que « Événements à venir » */
+.section-saying.kelele-saying,
+.section-saying.kelele-saying.bg-4 {
+  background-color: #faf8f3 !important;
+}

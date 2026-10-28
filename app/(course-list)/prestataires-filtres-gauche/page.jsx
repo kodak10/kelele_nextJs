@@ -13,9 +13,9 @@ export default function page() {
   return (
     <>
       <div id="wrapper">
-        <div className="tf-top-bar flex items-center justify-center">
+        {/* <div className="tf-top-bar flex items-center justify-center">
           <p>Intro price. Get UpSkill for Big Sale -95% off.</p>
-        </div>
+        </div> */}
 
         <Header1 />
         <PageTitle parentClass="page-title style-2 has-tags-bg-white" />

@@ -25,9 +25,9 @@ export default function page() {
     <>
       {" "}
       <div id="wrapper">
-        <div className="tf-top-bar style-2 flex items-center justify-center">
+        {/* <div className="tf-top-bar style-2 flex items-center justify-center">
           <p>Intro price. Get UpSkill for Big Sale -95% off.</p>
-        </div>
+        </div> */}
         <Header6 />
         <Hero />
         <div className="main-content pt-0">

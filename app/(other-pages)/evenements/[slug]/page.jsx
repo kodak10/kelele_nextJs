@@ -20,9 +20,9 @@ export default function page({ params }) {
   return (
     <>
       <div id="wrapper">
-        <div className="tf-top-bar flex items-center justify-center">
+        {/* <div className="tf-top-bar flex items-center justify-center">
           <p>Lancement sur les marchés pilotes : Abidjan et Lagos.</p>
-        </div>
+        </div> */}
         <Header1 />
         <div className="event-single-page-title page-title style-5">
           <div className="tf-container">
@@ -46,7 +46,7 @@ export default function page({ params }) {
                   </ul>
                   <h2 className="font-cardo fw-7">{event.title}</h2>
                   <p className="except">
-                    Réservez votre billet : chaque billet dispose d'un QR code unique, vérifié à l'entrée en moins d'une seconde.
+                    Réservez votre billet : chaque billet dispose d'un QR code unique, certifié à l'entrée en moins d'une seconde.
                   </p>
                   <ul className="entry-meta mb-30">
                     <li>

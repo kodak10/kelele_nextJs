@@ -33,7 +33,7 @@ export default function KTestimonials() {
     },
   };
   return (
-    <section className="section-saying tf-spacing-11 bg-4">
+    <section className="section-saying tf-spacing-11 bg-4 kelele-saying">
       <div className="tf-container full">
         <div className="row justify-center">
           <div className="col-lg-12">

@@ -21,7 +21,7 @@ const groups = [
     items: [
       { q: "Comment trouver un prestataire ?", a: "Utilisez la recherche et les filtres (catégorie, ville) de l'annuaire, puis consultez la fiche du prestataire et demandez un devis." },
       { q: "Comment demander un devis ?", a: "Depuis la fiche d'un prestataire, décrivez votre événement. Vous échangez ensuite avec lui via la messagerie de l'application." },
-      { q: "Puis-je organiser un événement depuis l'étranger ?", a: "Oui. KELELE permet à la diaspora de comparer des prestataires vérifiés, de payer en ligne et de suivre sa réservation à distance." },
+      { q: "Puis-je organiser un événement depuis l'étranger ?", a: "Oui. KELELE permet à la diaspora de comparer des prestataires certifiés, de payer en ligne et de suivre sa réservation à distance." },
     ],
   },
   {

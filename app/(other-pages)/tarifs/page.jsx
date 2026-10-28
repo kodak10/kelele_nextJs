@@ -19,7 +19,7 @@ const plans = [
     name: "Prestataire",
     price: "À définir",
     featured: true,
-    items: ["Fiche prestataire et services", "Profil vérifié (KYC)", "Réception des demandes de devis", "Gestion des réservations", "Encaissement via le partenaire de paiement"],
+    items: ["Fiche prestataire et services", "Profil certifié (KYC)", "Réception des demandes de devis", "Gestion des réservations", "Encaissement via le partenaire de paiement"],
     cta: { label: "Devenir prestataire", href: "/devenir-prestataire" },
   },
   {

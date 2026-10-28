@@ -27,7 +27,7 @@ export default function Register() {
                 />
                 <div className="blockquite wow fadeInLeft" data-wow-delay="0.1s">
                   <p>
-                    Trouvez des prestataires vérifiés, demandez des devis et
+                    Trouvez des prestataires certifiés, demandez des devis et
                     payez en toute sécurité.
                   </p>
                   <p className="author">KELELE</p>

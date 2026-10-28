@@ -21,9 +21,9 @@ export const metadata = {
 export default function page() {
   return (
     <>
-      <div className="tf-top-bar style-1 flex items-center justify-center">
+      {/* <div className="tf-top-bar style-1 flex items-center justify-center">
         <p>Intro price. Get UpSkill for Big Sale -95% off.</p>
-      </div>
+      </div> */}
       <div className="home-7">
         <Header7 />
       </div>

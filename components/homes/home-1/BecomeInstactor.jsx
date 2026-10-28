@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function BecomeInstactor() {
   return (
     <section
-      className="section-become-instructor tf-spacing-3 pt-0 wow fadeInUp"
+      className="section-become-instructor kelele-become tf-spacing-3 pt-0 wow fadeInUp"
       data-wow-delay="0.2s"
     >
       <div className="tf-container">
@@ -26,7 +26,7 @@ export default function BecomeInstactor() {
                   </li>
                   <li>
                     <i className="icon-check" />
-                    Profil vérifié (KYC) et avis clients
+                    Profil certifié (KYC) et avis clients
                   </li>
                 </ul>
               </div>
@@ -36,31 +36,34 @@ export default function BecomeInstactor() {
                     <li className="agent-img-item">
                       <Image
                         className="lazyload"
-                        data-src="/images/avatar/user-1.png"
+                        data-src="/images/prestataires/01-dj-sonorisation.jpg"
                         alt=""
-                        src="/images/avatar/user-1.png"
+                        src="/images/prestataires/01-dj-sonorisation.jpg"
                         width={84}
                         height={84}
+                        style={{ objectFit: "cover", width: "100%", height: "100%", borderRadius: "50%" }}
                       />
                     </li>
                     <li className="agent-img-item">
                       <Image
                         className="lazyload"
-                        data-src="/images/avatar/user-2.png"
+                        data-src="/images/prestataires/03-traiteur-buffet.jpg"
                         alt=""
-                        src="/images/avatar/user-2.png"
+                        src="/images/prestataires/03-traiteur-buffet.jpg"
                         width={84}
                         height={84}
+                        style={{ objectFit: "cover", width: "100%", height: "100%", borderRadius: "50%" }}
                       />
                     </li>
                     <li className="agent-img-item">
                       <Image
                         className="lazyload"
-                        data-src="/images/avatar/user-3.png"
+                        data-src="/images/prestataires/06-photographe-mariage.jpg"
                         alt=""
-                        src="/images/avatar/user-3.png"
+                        src="/images/prestataires/06-photographe-mariage.jpg"
                         width={84}
                         height={84}
+                        style={{ objectFit: "cover", width: "100%", height: "100%", borderRadius: "50%" }}
                       />
                     </li>
                     <li className="agent-img-item">
@@ -76,27 +79,17 @@ export default function BecomeInstactor() {
               <div className="content-img">
                 <Image
                   className="lazyload item-1"
-                  data-src="/images/section/become-instructor-1.png"
-                  alt=""
-                  src="/images/section/become-instructor-1.png"
-                  width={708}
-                  height={802}
-                />
-                <Image
-                  className="lazyload item-2"
-                  data-src="/images/item/item-4.png"
-                  alt=""
-                  src="/images/item/item-4.png"
-                  width={148}
-                  height={158}
-                />
-                <Image
-                  className="lazyload item-3"
-                  data-src="/images/item/item-20.png"
-                  alt=""
-                  src="/images/item/item-20.png"
-                  width={128}
-                  height={128}
+                  alt="Prestataire KELELE"
+                  src="/images/prestataires/05-decoration-florale.jpg"
+                  width={354}
+                  height={401}
+                  style={{
+                    width: 354,
+                    height: 401,
+                    maxWidth: "100%",
+                    objectFit: "cover",
+                    borderRadius: "16px 16px 0 0",
+                  }}
                 />
               </div>
             </div>

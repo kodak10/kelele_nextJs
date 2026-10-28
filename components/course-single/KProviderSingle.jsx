@@ -7,7 +7,7 @@ import { providers, providerHref } from "@/data/kelele";
 import AddToCart from "@/components/common/AddToCart";
 
 const offers = [
-  "Fiche prestataire vérifiée (KYC)",
+  "Fiche prestataire certifiée (KYC)",
   "Demande de devis gratuite",
   "Messagerie interne avec le prestataire",
   "Tarifs indicatifs et disponibilités",
@@ -29,7 +29,7 @@ const steps = [
 ];
 
 const benefits = [
-  { icon: "flaticon-check", text: "Prestataire vérifié (KYC)" },
+  { icon: "flaticon-check", text: "Prestataire certifié (KYC)" },
   { icon: "flaticon-document", text: "Devis gratuit et sans engagement" },
   { icon: "flaticon-mobile-phone", text: "Paiement Mobile Money ou carte" },
   { icon: "flaticon-play-1", text: "Messagerie interne" },
@@ -85,7 +85,7 @@ export default function KProviderSingle({ slug }) {
                   </li>
                   <li>
                     <i className="flaticon-check" />
-                    <p>Prestataire vérifié (KYC)</p>
+                    <p>Prestataire certifié (KYC)</p>
                   </li>
                   <li>
                     <i className="flaticon-clock" />
@@ -166,7 +166,7 @@ export default function KProviderSingle({ slug }) {
                     prestataire lors de la création de son profil KELELE.
                     <br />
                     <br />
-                    Chaque prestataire est vérifié par KELELE (documents KYC
+                    Chaque prestataire est certifié par KELELE (documents KYC
                     stockés de façon chiffrée) avant de pouvoir recevoir des
                     demandes de devis et des réservations.
                   </p>
@@ -226,7 +226,7 @@ export default function KProviderSingle({ slug }) {
                       <ul className="entry-meta">
                         <li>
                           <i className="flaticon-check" />
-                          Profil vérifié (KYC)
+                          Profil certifié (KYC)
                         </li>
                         <li>
                           <i className="flaticon-location" />
@@ -250,7 +250,7 @@ export default function KProviderSingle({ slug }) {
                   <Swiper {...swiperOptions} className="swiper-container slider-courses-7">
                     {providers.filter((p) => p.id !== provider.id).slice(0, 8).map((elm) => (
                       <SwiperSlide key={elm.id}>
-                        <div className="course-item hover-img title-small">
+                        <div className="course-item hover-img title-small kelele-course">
                           <div className="features image-wrap">
                             <Image
                               alt={elm.title}

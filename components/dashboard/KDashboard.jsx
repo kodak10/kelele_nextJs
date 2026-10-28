@@ -628,7 +628,7 @@ function KycPanel() {
               )}
             </>
           ) : (
-            "Aucun dossier soumis. Envoyez vos documents pour être vérifié et recevoir des demandes."
+            "Aucun dossier soumis. Envoyez vos documents pour être certifié et recevoir des demandes."
           )}
         </p>
         {mine && (
@@ -1149,7 +1149,7 @@ function Kpis({ kpis }) {
               height: 52,
               flexShrink: 0,
               borderRadius: "50%",
-              background: "#feeeea",
+              background: "#f7f0da",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -1162,7 +1162,7 @@ function Kpis({ kpis }) {
             <h6 className="fs-15" style={{ margin: 0 }}>
               {k.label}
             </h6>
-            <span className="fs-26 fw-5" style={{ color: "var(--Secondary, #e0754a)" }}>
+            <span className="fs-26 fw-5" style={{ color: "var(--Secondary, #c9a84c)" }}>
               {k.value}
             </span>
           </div>

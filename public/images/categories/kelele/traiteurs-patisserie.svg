@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 180 180" role="img">
+  <defs>
+    <linearGradient id="bg-traiteurs-patisserie" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffdf8"/>
+      <stop offset="1" stop-color="#efe6cf"/>
+    </linearGradient>
+    <linearGradient id="gold-traiteurs-patisserie" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e6cf8a"/>
+      <stop offset="1" stop-color="#c9a84c"/>
+    </linearGradient>
+  </defs>
+  <rect width="180" height="180" fill="url(#bg-traiteurs-patisserie)"/>
+  <circle cx="90" cy="92" r="64" fill="#c9a84c" opacity=".16"/>
+  <circle cx="90" cy="92" r="50" fill="#c9a84c" opacity=".14"/>
+
+  <circle cx="90" cy="48" r="8" fill="url(#gold-traiteurs-patisserie)"/>
+  <path d="M34 112a56 56 0 0 1 112 0z" fill="url(#gold-traiteurs-patisserie)"/>
+  <path d="M46 104a44 44 0 0 1 28-34" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".6"/>
+  <rect x="24" y="112" width="132" height="12" rx="6" fill="#131836"/>
+  <path d="M36 132h108" stroke="#131836" stroke-width="5" stroke-linecap="round"/>
+</svg>

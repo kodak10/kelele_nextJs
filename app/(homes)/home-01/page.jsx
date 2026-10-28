@@ -14,15 +14,15 @@ import KDownloadApp from "@/components/homes/home-1/KDownloadApp";
 export const metadata = {
   title: "KELELE — La super-application de l'écosystème événementiel africain",
   description:
-    "Trouvez des prestataires vérifiés, demandez des devis, payez en Mobile Money et gérez vos billets QR code. Lancement à Abidjan et Lagos.",
+    "Trouvez des prestataires certifiés, demandez des devis, payez en Mobile Money et gérez vos billets QR code. Lancement à Abidjan et Lagos.",
 };
 export default function HomePage1() {
   return (
     <>
       <div id="wrapper">
-        <div className="tf-top-bar flex items-center justify-center">
+        {/* <div className="tf-top-bar flex items-center justify-center">
           <p>Lancement sur les marchés pilotes : Abidjan et Lagos.</p>
-        </div>
+        </div> */}
 
         <Header1 />
         <HeroSearch />

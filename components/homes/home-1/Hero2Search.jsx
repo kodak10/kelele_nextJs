@@ -156,7 +156,7 @@ export default function Hero2Search() {
                 Tous vos événements, une seule application
               </h1>
               <h6 className="wow fadeInUp" data-wow-delay="0.3s">
-                Trouvez des prestataires vérifiés, demandez des devis, payez en Mobile Money et gérez vos billets QR code, depuis Abidjan, Lagos ou la diaspora.
+                Trouvez des prestataires certifiés, demandez des devis, payez en Mobile Money et gérez vos billets QR code, depuis Abidjan, Lagos ou la diaspora.
               </h6>
               <form
                 onSubmit={handleSearch}

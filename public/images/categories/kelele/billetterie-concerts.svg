@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 180 180" role="img">
+  <defs>
+    <linearGradient id="bg-billetterie-concerts" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffdf8"/>
+      <stop offset="1" stop-color="#efe6cf"/>
+    </linearGradient>
+    <linearGradient id="gold-billetterie-concerts" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e6cf8a"/>
+      <stop offset="1" stop-color="#c9a84c"/>
+    </linearGradient>
+  </defs>
+  <rect width="180" height="180" fill="url(#bg-billetterie-concerts)"/>
+  <circle cx="90" cy="92" r="64" fill="#c9a84c" opacity=".16"/>
+  <circle cx="90" cy="92" r="50" fill="#c9a84c" opacity=".14"/>
+
+  <path d="M26 58a12 12 0 0 1 12-12h104a12 12 0 0 1 12 12v18a14 14 0 0 0 0 28v18a12 12 0 0 1-12 12H38a12 12 0 0 1-12-12v-18a14 14 0 0 0 0-28z" fill="#131836"/>
+  <path d="M118 52v76" stroke="#c9a84c" stroke-width="3" stroke-dasharray="6 6"/>
+  <rect x="38" y="62" width="62" height="10" rx="5" fill="url(#gold-billetterie-concerts)"/>
+  <rect x="38" y="80" width="46" height="7" rx="3.5" fill="#faf8f3" opacity=".75"/>
+  <rect x="38" y="94" width="54" height="7" rx="3.5" fill="#faf8f3" opacity=".55"/>
+  <path d="M42 120l5 8 5-8" fill="none" stroke="#c9a84c" stroke-width="3" stroke-linecap="round"/>
+  <g fill="#faf8f3">
+    <rect x="126" y="60" width="9" height="9"/><rect x="140" y="60" width="9" height="9"/>
+    <rect x="126" y="74" width="9" height="9"/><rect x="133" y="88" width="9" height="9"/>
+    <rect x="144" y="82" width="6" height="6"/><rect x="126" y="102" width="9" height="9"/>
+    <rect x="140" y="104" width="9" height="9"/><rect x="146" y="92" width="5" height="5"/>
+  </g>
+</svg>

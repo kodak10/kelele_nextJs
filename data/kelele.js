@@ -2,14 +2,14 @@
 // Les éléments marqués "exemple" sont des placeholders à remplacer par des données réelles.
 
 export const keleleCategories = [
-  { imgSrc: "/images/categories/categories-05.jpg", category: "DJ & Animation", delay: "0.3s" },
-  { imgSrc: "/images/categories/categories-07.jpg", category: "Traiteurs & Pâtisserie", delay: "0.33s" },
-  { imgSrc: "/images/categories/categories-01.jpg", category: "Décoration & Scénographie", delay: "0.35s" },
-  { imgSrc: "/images/categories/categories-04.jpg", category: "Photo & Vidéo", delay: "0.37s" },
-  { imgSrc: "/images/categories/categories-06.jpg", category: "Salles & Lieux", delay: "0.4s" },
-  { imgSrc: "/images/categories/categories-02.jpg", category: "Event planners", delay: "0.43s" },
-  { imgSrc: "/images/categories/categories-03.jpg", category: "Artistes & Musique live", delay: "0.45s" },
-  { imgSrc: "/images/categories/categories-08.jpg", category: "Billetterie & Concerts", delay: "0.47s" },
+  { imgSrc: "/images/categories/kelele/dj-animation.svg", category: "DJ & Animation", delay: "0.3s" },
+  { imgSrc: "/images/categories/kelele/traiteurs-patisserie.svg", category: "Traiteurs & Pâtisserie", delay: "0.33s" },
+  { imgSrc: "/images/categories/kelele/decoration-scenographie.svg", category: "Décoration & Scénographie", delay: "0.35s" },
+  { imgSrc: "/images/categories/kelele/photo-video.svg", category: "Photo & Vidéo", delay: "0.37s" },
+  { imgSrc: "/images/categories/kelele/salles-lieux.svg", category: "Salles & Lieux", delay: "0.4s" },
+  { imgSrc: "/images/categories/kelele/event-planners.svg", category: "Event planners", delay: "0.43s" },
+  { imgSrc: "/images/categories/kelele/artistes-musique-live.svg", category: "Artistes & Musique live", delay: "0.45s" },
+  { imgSrc: "/images/categories/kelele/billetterie-concerts.svg", category: "Billetterie & Concerts", delay: "0.47s" },
 ];
 
 export const keleleAcademic = [
@@ -31,24 +31,24 @@ export const providerTabs = [
 
 // Exemples de fiches prestataires
 export const providers = [
-  { id: 1, imgSrc: "/images/courses/courses-01.jpg", title: "DJ & Sonorisation pour mariages et soirées privées", city: "Abidjan, Côte d'Ivoire", tag: "Vérifié", filterCategories: ["DJ & Animation"] },
-  { id: 2, imgSrc: "/images/courses/courses-02.jpg", title: "Animation & MC pour événements d'entreprise", city: "Lagos, Nigeria", filterCategories: ["DJ & Animation"] },
-  { id: 3, imgSrc: "/images/courses/courses-03.jpg", title: "Traiteur — buffets, cocktails et pièces montées", city: "Abidjan, Côte d'Ivoire", tag: "Vérifié", filterCategories: ["Traiteurs & Pâtisserie"] },
-  { id: 4, imgSrc: "/images/courses/courses-04.jpg", title: "Pâtisserie événementielle sur commande", city: "Lagos, Nigeria", filterCategories: ["Traiteurs & Pâtisserie"] },
-  { id: 5, imgSrc: "/images/courses/courses-05.jpg", title: "Décoration florale et scénographie de salle", city: "Abidjan, Côte d'Ivoire", tag: "Vérifié", filterCategories: ["Décoration & Scénographie"] },
-  { id: 6, imgSrc: "/images/courses/courses-06.jpg", title: "Photographe & vidéaste de mariage", city: "Abidjan, Côte d'Ivoire", filterCategories: ["Photo & Vidéo"] },
-  { id: 7, imgSrc: "/images/courses/courses-07.jpg", title: "Couverture photo et drone pour événements", city: "Lagos, Nigeria", tag: "Vérifié", filterCategories: ["Photo & Vidéo"] },
-  { id: 8, imgSrc: "/images/courses/courses-08.jpg", title: "Salle de réception modulable, jusqu'à 500 invités", city: "Abidjan, Côte d'Ivoire", filterCategories: ["Salles & Lieux"] },
+  { id: 1, imgSrc: "/images/prestataires/01-dj-sonorisation.jpg", title: "DJ & Sonorisation pour mariages et soirées privées", city: "Abidjan, Côte d'Ivoire", tag: "Certifié", filterCategories: ["DJ & Animation"] },
+  { id: 2, imgSrc: "/images/prestataires/02-animation-mc.jpg", title: "Animation & MC pour événements d'entreprise", city: "Lagos, Nigeria", filterCategories: ["DJ & Animation"] },
+  { id: 3, imgSrc: "/images/prestataires/03-traiteur-buffet.jpg", title: "Traiteur — buffets, cocktails et pièces montées", city: "Abidjan, Côte d'Ivoire", tag: "Certifié", filterCategories: ["Traiteurs & Pâtisserie"] },
+  { id: 4, imgSrc: "/images/prestataires/04-patisserie.jpg", title: "Pâtisserie événementielle sur commande", city: "Lagos, Nigeria", filterCategories: ["Traiteurs & Pâtisserie"] },
+  { id: 5, imgSrc: "/images/prestataires/05-decoration-florale.jpg", title: "Décoration florale et scénographie de salle", city: "Abidjan, Côte d'Ivoire", tag: "Certifié", filterCategories: ["Décoration & Scénographie"] },
+  { id: 6, imgSrc: "/images/prestataires/06-photographe-mariage.jpg", title: "Photographe & vidéaste de mariage", city: "Abidjan, Côte d'Ivoire", filterCategories: ["Photo & Vidéo"] },
+  { id: 7, imgSrc: "/images/prestataires/07-photo-drone.jpg", title: "Photographe de cérémonies et d'événements", city: "Lagos, Nigeria", tag: "Certifié", filterCategories: ["Photo & Vidéo"] },
+  { id: 8, imgSrc: "/images/prestataires/08-salle-reception.jpg", title: "Salle de réception modulable, jusqu'à 500 invités", city: "Abidjan, Côte d'Ivoire", filterCategories: ["Salles & Lieux"] },
 ];
 
 // Prestataires vedettes (exemples)
 export const featuredProviders = [
-  { id: 1, providerId: 1, imgSrc: "/images/instructors/instructors-01.jpg", name: "DJ & Sonorisation", description: "Mariages, soirées et concerts", city: "Abidjan" },
-  { id: 2, providerId: 3, imgSrc: "/images/instructors/instructors-02.jpg", name: "Traiteur événementiel", description: "Buffets, cocktails et banquets", city: "Abidjan" },
-  { id: 3, providerId: 5, imgSrc: "/images/instructors/instructors-03.jpg", name: "Décorateur d'intérieur", description: "Scénographie et décoration florale", city: "Lagos" },
-  { id: 4, providerId: 6, imgSrc: "/images/instructors/instructors-04.jpg", name: "Photographe", description: "Mariages et événements corporate", city: "Abidjan" },
-  { id: 5, providerId: 9, imgSrc: "/images/instructors/instructors-05.jpg", name: "Event planner", description: "Organisation clé en main", city: "Lagos" },
-  { id: 6, providerId: 11, imgSrc: "/images/instructors/instructors-06.jpg", name: "Artiste live", description: "Musique live et animation scénique", city: "Abidjan" },
+  { id: 1, providerId: 1, imgSrc: "/images/prestataires/01-dj-sonorisation.jpg", name: "DJ & Sonorisation", description: "Mariages, soirées et concerts", city: "Abidjan" },
+  { id: 2, providerId: 3, imgSrc: "/images/prestataires/03-traiteur-buffet.jpg", name: "Traiteur événementiel", description: "Buffets, cocktails et banquets", city: "Abidjan" },
+  { id: 3, providerId: 5, imgSrc: "/images/prestataires/05-decoration-florale.jpg", name: "Décorateur d'intérieur", description: "Scénographie et décoration florale", city: "Lagos" },
+  { id: 4, providerId: 6, imgSrc: "/images/prestataires/06-photographe-mariage.jpg", name: "Photographe", description: "Mariages et événements corporate", city: "Abidjan" },
+  { id: 5, providerId: 9, imgSrc: "/images/prestataires/09-event-planner.jpg", name: "Event planner", description: "Organisation clé en main", city: "Lagos" },
+  { id: 6, providerId: 11, imgSrc: "/images/prestataires/11-groupe-live.jpg", name: "Artiste live", description: "Musique live et animation scénique", city: "Abidjan" },
 ];
 
 // Événements (exemples — dates à remplacer)
@@ -64,16 +64,16 @@ export const keleleTestimonials = [
   { imgSrc: "/images/avatar/user-4.png", name: "Cliente particulière", role: "Mariage, Abidjan", rating: 5, testimonial: "J'ai comparé plusieurs prestataires, demandé des devis et payé en Mobile Money sans quitter l'application." },
   { imgSrc: "/images/avatar/user-5.png", name: "DJ professionnel", role: "Prestataire, Lagos", rating: 5, testimonial: "Ma fiche me donne de la visibilité et les réservations sont confirmées de façon claire." },
   { imgSrc: "/images/avatar/user-6.png", name: "Event planner", role: "Organisateur, Abidjan", rating: 5, testimonial: "La messagerie, les devis et la billetterie QR sont réunis au même endroit." },
-  { imgSrc: "/images/avatar/user-7.png", name: "Membre de la diaspora", role: "Organise à distance", rating: 5, testimonial: "Je prépare l'événement de ma famille depuis l'étranger avec des prestataires vérifiés." },
+  { imgSrc: "/images/avatar/user-7.png", name: "Membre de la diaspora", role: "Organise à distance", rating: 5, testimonial: "Je prépare l'événement de ma famille depuis l'étranger avec des prestataires certifiés." },
   { imgSrc: "/images/avatar/user-8.png", name: "Responsable événementiel", role: "Entreprise, Lagos", rating: 5, testimonial: "Les paiements sécurisés et les avis nous aident à choisir les bons prestataires." },
 ];
 
 // Prestataires supplémentaires pour couvrir toutes les catégories (exemples)
 providers.push(
-  { id: 9, imgSrc: "/images/courses/courses-09.jpg", title: "Organisation clé en main de mariages et réceptions", city: "Abidjan, Côte d'Ivoire", tag: "Vérifié", filterCategories: ["Event planners"] },
-  { id: 10, imgSrc: "/images/courses/courses-11.jpg", title: "Agence événementielle pour séminaires et événements MICE", city: "Lagos, Nigeria", filterCategories: ["Event planners"] },
-  { id: 11, imgSrc: "/images/courses/courses-12.jpg", title: "Groupe de musique live et chanteurs pour cérémonies", city: "Abidjan, Côte d'Ivoire", filterCategories: ["Artistes & Musique live"] },
-  { id: 12, imgSrc: "/images/courses/courses-13.jpg", title: "Billetterie et contrôle d'accès par QR code", city: "Lagos, Nigeria", tag: "Vérifié", filterCategories: ["Billetterie & Concerts"] }
+  { id: 9, imgSrc: "/images/prestataires/09-event-planner.jpg", title: "Organisation clé en main de mariages et réceptions", city: "Abidjan, Côte d'Ivoire", tag: "Certifié", filterCategories: ["Event planners"] },
+  { id: 10, imgSrc: "/images/prestataires/10-agence-mice.jpg", title: "Agence événementielle pour séminaires et événements MICE", city: "Lagos, Nigeria", filterCategories: ["Event planners"] },
+  { id: 11, imgSrc: "/images/prestataires/11-groupe-live.jpg", title: "Groupe de musique live et chanteurs pour cérémonies", city: "Abidjan, Côte d'Ivoire", filterCategories: ["Artistes & Musique live"] },
+  { id: 12, imgSrc: "/images/prestataires/12-billetterie-concert.jpg", title: "Billetterie et contrôle d'accès par QR code", city: "Lagos, Nigeria", tag: "Certifié", filterCategories: ["Billetterie & Concerts"] }
 );
 
 export const providerCities = ["Abidjan, Côte d'Ivoire", "Lagos, Nigeria"];

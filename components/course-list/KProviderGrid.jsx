@@ -114,7 +114,7 @@ export default function KProviderGrid() {
 
               <div className="grid-list-items-5">
                 {results.map((elm) => (
-                  <div key={elm.id} className="course-item hover-img fl-item h190">
+                  <div key={elm.id} className="course-item hover-img fl-item h190 kelele-course">
                     <div className="features image-wrap">
                       <Image
                         className="lazyload"
@@ -155,7 +155,7 @@ export default function KProviderGrid() {
                       </h6>
                       <div className="ratings pb-30">
                         <i className="icon-check" />
-                        <div className="total">Prestataire vérifié (KYC)</div>
+                        <div className="total">Prestataire certifié (KYC)</div>
                       </div>
                       <div className="author">
                         {elm.filterCategories.join(", ")}

@@ -71,7 +71,7 @@ export default function EventSingle({}) {
                           <a href="/annuaire" className="h6 fw-5">
                             DJ & Sonorisation
                           </a>
-                          <p>Prestataire vérifié</p>
+                          <p>Prestataire certifié</p>
                         </div>
                       </div>
                     </div>
@@ -98,7 +98,7 @@ export default function EventSingle({}) {
                           <a href="/annuaire" className="h6 fw-5">
                             Traiteur événementiel
                           </a>
-                          <p>Prestataire vérifié</p>
+                          <p>Prestataire certifié</p>
                         </div>
                       </div>
                     </div>
@@ -125,7 +125,7 @@ export default function EventSingle({}) {
                           <a href="/annuaire" className="h6 fw-5">
                             Décorateur
                           </a>
-                          <p>Prestataire vérifié</p>
+                          <p>Prestataire certifié</p>
                         </div>
                       </div>
                     </div>
@@ -152,7 +152,7 @@ export default function EventSingle({}) {
                           <a href="/annuaire" className="h6 fw-5">
                             Photographe
                           </a>
-                          <p>Prestataire vérifié</p>
+                          <p>Prestataire certifié</p>
                         </div>
                       </div>
                     </div>

@@ -5,7 +5,7 @@ import KPage, { Section, Cards } from "@/components/otherPages/k/KPage";
 export const metadata = {
   title: "À propos || KELELE",
   description:
-    "KELELE, la super-application de l'écosystème événementiel africain : prestataires vérifiés, paiement sécurisé, billetterie QR code.",
+    "KELELE, la super-application de l'écosystème événementiel africain : prestataires certifiés, paiement sécurisé, billetterie QR code.",
 };
 
 const pains = [
@@ -22,7 +22,7 @@ const segments = [
 ];
 
 const features = [
-  { icon: "flaticon-check", title: "Prestataires vérifiés", text: "Vérification d'identité (KYC) par l'équipe KELELE, documents stockés de façon chiffrée." },
+  { icon: "flaticon-check", title: "Prestataires certifiés", text: "Vérification d'identité (KYC) par l'équipe KELELE, documents stockés de façon chiffrée." },
   { icon: "flaticon-document", title: "Devis et messagerie", text: "Demandez des devis et échangez avec les prestataires sans quitter l'application." },
   { icon: "flaticon-mobile-phone", title: "Paiement Mobile Money et carte", text: "Wave, Orange Money, MTN MoMo, M-Pesa et cartes Visa/Mastercard via notre partenaire de paiement." },
   { icon: "flaticon-bag", title: "Billetterie QR code", text: "Billets avec QR code unique et contrôle d'accès par scan, même hors-ligne." },

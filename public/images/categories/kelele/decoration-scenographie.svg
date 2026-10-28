@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 180 180" role="img">
+  <defs>
+    <linearGradient id="bg-decoration-scenographie" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffdf8"/>
+      <stop offset="1" stop-color="#efe6cf"/>
+    </linearGradient>
+    <linearGradient id="gold-decoration-scenographie" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e6cf8a"/>
+      <stop offset="1" stop-color="#c9a84c"/>
+    </linearGradient>
+  </defs>
+  <rect width="180" height="180" fill="url(#bg-decoration-scenographie)"/>
+  <circle cx="90" cy="92" r="64" fill="#c9a84c" opacity=".16"/>
+  <circle cx="90" cy="92" r="50" fill="#c9a84c" opacity=".14"/>
+
+  <path d="M62 78c-6 18-6 34 2 52M92 70c0 20 2 38 8 60M120 80c6 18 4 32-4 50" fill="none" stroke="#131836" stroke-width="2.5"/>
+  <ellipse cx="60" cy="58" rx="22" ry="26" fill="url(#gold-decoration-scenographie)"/>
+  <ellipse cx="94" cy="48" rx="22" ry="26" fill="#131836"/>
+  <ellipse cx="124" cy="62" rx="20" ry="24" fill="url(#gold-decoration-scenographie)" opacity=".85"/>
+  <path d="M55 88l5 7 5-7z" fill="url(#gold-decoration-scenographie)"/><path d="M89 78l5 7 5-7z" fill="#131836"/><path d="M119 90l5 7 5-7z" fill="url(#gold-decoration-scenographie)"/>
+  <ellipse cx="52" cy="48" rx="5" ry="8" fill="#fff" opacity=".5"/>
+  <path d="M40 140l50-8 50 8" fill="none" stroke="#131836" stroke-width="4" stroke-linecap="round"/>
+  <path d="M90 126l3 7h8l-6 5 2 8-7-5-7 5 2-8-6-5h8z" fill="url(#gold-decoration-scenographie)"/>
+</svg>

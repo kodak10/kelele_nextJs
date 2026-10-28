@@ -22,9 +22,9 @@ export default function Header5() {
                   <Image
                     id="logo-header"
                     alt=""
-                    src="/images/logo/logo-black.svg"
-                    width={123}
-                    height={35}
+                    src="/images/logo/logo.png"
+                    width={83}
+                    height={56}
                   />
                 </Link>
               </div>

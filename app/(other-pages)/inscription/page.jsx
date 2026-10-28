@@ -10,9 +10,9 @@ export default function page() {
   return (
     <>
       <div id="wrapper">
-        <div className="tf-top-bar flex items-center justify-center">
+        {/* <div className="tf-top-bar flex items-center justify-center">
           <p>Lancement sur les marchés pilotes : Abidjan et Lagos.</p>
-        </div>
+        </div> */}
         <Header1 />
         <Register />
         <Footer1 />

@@ -7,9 +7,9 @@ import Footer1 from "@/components/footers/Footer1";
 export default function KPage({ title, subtitle, children }) {
   return (
     <div id="wrapper">
-      <div className="tf-top-bar flex items-center justify-center">
+      {/* <div className="tf-top-bar flex items-center justify-center">
         <p>Lancement sur les marchés pilotes : Abidjan et Lagos.</p>
-      </div>
+      </div> */}
       <Header1 />
       <div className="page-title basic">
         <div className="tf-container full">
