@@ -58,4 +58,5 @@ jobs:
 
       - name: Déploiement ignoré (identifiants FTP absents)
         if: ${{ env.FTP_PASSWORD == '' }}
-        run: echo "::warning::Secrets FTP_SERVER / FTP_USERNAME / FTP_PASSWORD non définis : build OK, déploiement ignoré."
+        run: |
+          echo "::warning::Secrets FTP_SERVER, FTP_USERNAME et FTP_PASSWORD non définis. Build OK, déploiement ignoré."
