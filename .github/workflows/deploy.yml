@@ -1,0 +1,61 @@
+name: Déploiement
+
+# Déploie automatiquement sur le serveur FTP à chaque push sur main ou v2.
+# On peut aussi le lancer à la main (Actions > Déploiement > Run workflow).
+on:
+  push:
+    branches: [main, v2]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    env:
+      FTP_SERVER: ${{ secrets.FTP_SERVER }}
+      FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+      FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+    steps:
+      - name: Récupération du code
+        uses: actions/checkout@v4
+
+      - name: Installation de Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Installation des dépendances
+        run: npm ci
+
+      - name: Build (export statique)
+        run: npm run build
+        env:
+          NEXT_OUTPUT: export
+          NEXT_TELEMETRY_DISABLED: "1"
+
+      - name: Vérification de l'export
+        run: |
+          test -f out/index.html
+          test -f out/.htaccess
+          echo "Pages générées : $(find out -name index.html | wc -l)"
+
+      - name: Déploiement FTP
+        if: ${{ env.FTP_PASSWORD != '' }}
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
+          protocol: ftps
+          security: loose
+          local-dir: ./out/
+          server-dir: ${{ vars.FTP_DIR || './' }}
+
+      - name: Déploiement ignoré (identifiants FTP absents)
+        if: ${{ env.FTP_PASSWORD == '' }}
+        run: echo "::warning::Secrets FTP_SERVER / FTP_USERNAME / FTP_PASSWORD non définis : build OK, déploiement ignoré."

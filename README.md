@@ -54,3 +54,25 @@ clés `kelele:*`). L'admin voit donc ce que soumettent les autres espaces **sur 
 
 Les textes marqués « exemple » (prestataires, événements, témoignages) et les coordonnées de
 contact sont des contenus provisoires à remplacer.
+
+## Déploiement automatique (GitHub Actions → serveur FTP)
+
+À chaque push sur `main` ou `v2`, le workflow [.github/workflows/deploy.yml](.github/workflows/deploy.yml) :
+1. installe les dépendances et construit le site en **export statique** (`NEXT_OUTPUT=export`) ;
+2. envoie le contenu de `out/` sur le serveur par **FTPS** (port 21).
+
+Les identifiants ne sont **jamais** dans le dépôt. À définir une fois dans GitHub
+(*Settings → Secrets and variables → Actions*) :
+
+| Type | Nom | Valeur |
+|---|---|---|
+| Secret | `FTP_SERVER` | `ftp.groupadvice.net` |
+| Secret | `FTP_USERNAME` | l'identifiant FTP |
+| Secret | `FTP_PASSWORD` | le mot de passe FTP |
+| Variable (optionnelle) | `FTP_DIR` | dossier cible sur le serveur, ex. `/public_html/` (par défaut : racine du compte FTP) |
+
+Sans ces secrets, le workflow construit le site mais n'envoie rien (un avertissement s'affiche).
+Il peut aussi être lancé à la main : *Actions → Déploiement → Run workflow*.
+
+Le site exporté est purement statique : les données de démonstration restent dans le navigateur
+des visiteurs, il n'y a pas de serveur Node à faire tourner.
