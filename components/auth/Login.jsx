@@ -22,9 +22,10 @@ export default function Login() {
                 <Image
                   className="ls-is-cached lazyloaded"
                   alt=""
-                  src="/images/page-title/page-title-home2-1.jpg"
+                  src="/images/charte/univers-mariage.jpg"
                   width={591}
                   height={680}
+                  style={{ width: "100%", height: 681, objectFit: "cover" }}
                 />
                 <div className="blockquite wow fadeInLeft" data-wow-delay="0.1s">
                   <p>
@@ -57,7 +58,7 @@ export default function Login() {
                   <div
                     style={{
                       display: "grid",
-                      gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
+                      gridTemplateColumns: "repeat(2, 1fr)",
                       gap: 10,
                     }}
                   >
@@ -66,7 +67,7 @@ export default function Login() {
                         key={q.role}
                         href={q.href}
                         className="tf-btn style-secondary"
-                        style={{ justifyContent: "center", whiteSpace: "nowrap" }}
+                        style={{ justifyContent: "center", whiteSpace: "nowrap", width: "100%", padding: "12px 14px" }}
                       >
                         <i className={roleIcons[q.role]} /> {q.label}
                       </Link>

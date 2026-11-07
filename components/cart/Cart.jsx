@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useContextElement } from "@/context/Context";
+import CertifiedBadge from "@/components/common/CertifiedBadge";
 
 export default function Cart() {
   const { cartServices, removeServiceFromCart, updateServiceInCart, clearServiceCart } = useContextElement();
@@ -48,13 +49,18 @@ export default function Cart() {
                 flexWrap: "wrap",
               }}
             >
-              <Image
-                src={item.imgSrc}
-                alt={item.title}
-                width={140}
-                height={100}
-                style={{ width: 140, height: 100, objectFit: "cover", borderRadius: 12 }}
-              />
+              <div style={{ position: "relative", width: 140, height: 100, flexShrink: 0 }}>
+                <Image
+                  src={item.imgSrc}
+                  alt={item.title}
+                  width={140}
+                  height={100}
+                  style={{ width: 140, height: 100, objectFit: "cover", borderRadius: 12 }}
+                />
+                <span className="kelele-badge-on-image" style={{ top: 6, left: 6 }}>
+                  <CertifiedBadge size={26} />
+                </span>
+              </div>
               <div style={{ flex: "1 1 260px", minWidth: 0 }}>
                 <h6 className="fw-5 mb-10">
                   <Link href={item.slug ? `/prestataires/${item.slug}` : "/prestataires"}>{item.title}</Link>

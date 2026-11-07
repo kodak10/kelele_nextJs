@@ -1,7 +1,6 @@
 import Footer1 from "@/components/footers/Footer1";
 import Header1 from "@/components/headers/Header1";
 import HeroSearch from "@/components/home/HeroSearch";
-import PopularProviders from "@/components/home/PopularProviders";
 import FeaturedProviders from "@/components/home/FeaturedProviders";
 import BecomeProvider from "@/components/home/BecomeProvider";
 import Categories from "@/components/home/Categories";
@@ -10,6 +9,8 @@ import UpcomingEvents from "@/components/home/UpcomingEvents";
 import Newsletter from "@/components/home/Newsletter";
 import Testimonials from "@/components/home/Testimonials";
 import AppDownload from "@/components/home/AppDownload";
+import TrustStrip from "@/components/home/TrustStrip";
+import MediaUniverses from "@/components/home/MediaUniverses";
 
 export const metadata = {
   title: "KELELE — La super-application de l'écosystème événementiel africain",
@@ -24,18 +25,23 @@ export default function Home() {
           <p>Lancement sur les marchés pilotes : Abidjan et Lagos.</p>
         </div> */}
 
-        <Header1 />
+        <Header1 overlay />
         <HeroSearch />
-        <div className="main-content pb-63">
-          <Expertise />
-          <Categories showHeading={false} />
-          <PopularProviders />
-          <UpcomingEvents />
+        <div className="main-content pt-0 pb-0">
+          {/* 1. Explorer */}
+          <Categories />
           <FeaturedProviders />
+          <UpcomingEvents />
+          {/* 2. Valeur pour les professionnels */}
           <BecomeProvider />
-          <Newsletter />
+          {/* 3. Confiance */}
+          <TrustStrip />
+          <Expertise />
           <Testimonials />
+          <Newsletter />
           <AppDownload />
+          {/* 4. Médias, Awards, Academy */}
+          <MediaUniverses />
         </div>
         <Footer1 />
       </div>

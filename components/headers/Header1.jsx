@@ -1,15 +1,25 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import Nav from "@/components/headers/Nav";
 import Link from "next/link";
 import Image from "next/image";
-import Categories from "@/components/headers/Categories";
 import MobileNav from "@/components/headers/MobileNav";
 import { useContextElement } from "@/context/Context";
-export default function Header1() {
+export default function Header1({ overlay = false }) {
   const { cartServices } = useContextElement();
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    if (!overlay) return;
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [overlay]);
   return (
-    <header id="header_main" className="header kelele-header">
+    <header
+      id="header_main"
+      className={`header kelele-header${overlay ? " kelele-header-overlay" : ""}${scrolled ? " is-scrolled" : ""}`}
+    >
       <div className="header-inner">
         <div className="header-inner-wrap">
           <div className="header-left flex-grow">
@@ -31,50 +41,15 @@ export default function Header1() {
                 />
               </Link>
             </div>
-            <div className="header-catalog">
-              <a href="#" className="header-text">
-                Catégories
-                <i className="icon-arrow-bottom" />
-              </a>
-              <Categories />
-            </div>
-            <div className="header-search flex-grow">
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  const q = new FormData(e.currentTarget).get("text");
-                  window.location.href = "/prestataires?q=" + encodeURIComponent(q || "");
-                }}
-                className="form-search"
-              >
-                <fieldset>
-                  <input
-                    className=""
-                    type="text"
-                    placeholder="Rechercher un prestataire, un événement…"
-                    name="text"
-                    tabIndex={2}
-                    defaultValue=""
-                    aria-required="true"
-                    required
-                  />
-                </fieldset>
-                <div className="button-submit">
-                  <button className="" type="submit">
-                    <i className="icon-search fs-20" />
-                  </button>
-                </div>
-              </form>
-            </div>
           </div>
+          <nav className="main-menu">
+            <ul className="navigation">
+              <Nav />
+            </ul>
+          </nav>
           <div className="header-right">
-            <nav className="main-menu">
-              <ul className="navigation">
-                <Nav />
-              </ul>
-            </nav>
             <a
-              className="d-lg-none flex"
+              className="flex kelele-search-trigger"
               href="#canvasSearch"
               data-bs-toggle="offcanvas"
               aria-controls="offcanvasLeft"
@@ -99,7 +74,7 @@ export default function Header1() {
                     height: 18,
                     padding: "0 5px",
                     borderRadius: 999,
-                    background: "var(--Secondary, #c9a84c)",
+                    background: "var(--Secondary, #d7ad49)",
                     color: "#fff",
                     fontSize: 11,
                     fontWeight: 600,

@@ -1,70 +1,39 @@
-import { keleleCategories as categories2 } from "@/data/kelele";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-export default function Categories({ showHeading = true }) {
+import { universes } from "@/data/kelele";
+
+// « Explorez nos univers » : cartes avec photo, titre et lien vers la catégorie.
+export default function Categories() {
   return (
-    <section className="tf-spacing-5 section-categories pt-0">
+    <section className="kelele-universes">
       <div className="tf-container">
-        {showHeading && (
-          <div className="heading-section text-center">
-            <h2 className="fw-7 wow fadeInUp" data-wow-delay="0.1s">
-              Catégories de prestataires
-            </h2>
-            <p className="wow fadeInUp" data-wow-delay="0.2s">
-              DJ, traiteurs, décorateurs, photographes, salles et bien plus
-            </p>
+        <div className="kelele-universes-head">
+          <div>
+            <h2 className="fw-7">Explorez nos univers</h2>
+            <p>Des solutions complètes pour tous vos événements et expériences.</p>
           </div>
-        )}
-        <div className="categories-items">
-          <div className="row">
-            {categories2.map((category, index) => (
-              <div className="col-sm-6 col-lg-3" key={index}>
-                <div
-                  className="categories-item categories-item-default wow fadeInUp"
-                  data-wow-delay={category.delay}
-                >
-                  <div className="categories-item-image">
-                    <Image
-                      className="lazyload"
-                      src={category.imgSrc}
-                      alt={category.category}
-                      style={{ width: "fit-content" }}
-                      width={180}
-                      height={180}
-                    />
-                  </div>
-                  <div className="categories-item-content">
-                    <Link
-                      href={`/prestataires?category=${encodeURIComponent(category.category)}`}
-                      className="text"
-                    >
-                      {category.category}
-                    </Link>
-                    <div className="categories-item-btn">
-                      <Link
-                        href={`/prestataires?category=${encodeURIComponent(category.category)}`}
-                        className="flex items-center gap-10"
-                      >
-                        <span>Voir les prestataires</span>
-                        <i className="icon-arrow-top-right" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="categories-btn flex justify-center">
-          <Link
-            href={`/prestataires`}
-            className="tf-btn-arrow wow fadeInUp"
-            data-wow-delay="0.4s"
-          >
-            Toutes les catégories
-            <i className="icon-arrow-top-right" />
+          <Link href="/prestataires" className="kelele-link-arrow">
+            Voir toutes les catégories <i className="icon-arrow-top-right" />
           </Link>
+        </div>
+        <div className="kelele-universes-grid">
+          {universes.map((u) => (
+            <Link href={u.href} className="kelele-universe-card" key={u.title}>
+              <div className="kelele-universe-img">
+                <Image src={u.img} alt={u.title} width={480} height={360} />
+              </div>
+              <div className="kelele-universe-body">
+                <div>
+                  <h6 className="fw-6">{u.title}</h6>
+                  <span>Voir les prestataires</span>
+                </div>
+                <span className="kelele-round-btn" aria-hidden="true">
+                  <i className="icon-arrow-top-right" />
+                </span>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>

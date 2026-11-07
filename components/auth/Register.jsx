@@ -4,9 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const accountTypes = [
-  { value: "client", label: "Client", text: "J'organise un événement" },
-  { value: "prestataire", label: "Prestataire", text: "DJ, traiteur, décorateur…" },
-  { value: "organisateur", label: "Organisateur pro", text: "Agence, event planner, entreprise" },
+  { value: "client", label: "Client", text: "J'organise un événement", icon: "flaticon-user" },
+  { value: "prestataire", label: "Prestataire", text: "DJ, traiteur, décorateur…", icon: "flaticon-medal" },
+  { value: "organisateur", label: "Organisateur pro", text: "Agence, event planner, entreprise", icon: "flaticon-calendar" },
 ];
 
 export default function Register() {
@@ -21,9 +21,10 @@ export default function Register() {
                 <Image
                   className="ls-is-cached lazyloaded"
                   alt=""
-                  src="/images/page-title/page-title-home2-2.jpg"
+                  src="/images/about/mariage.jpg"
                   width={592}
                   height={681}
+                  style={{ width: "100%", height: 681, objectFit: "cover" }}
                 />
                 <div className="blockquite wow fadeInLeft" data-wow-delay="0.1s">
                   <p>
@@ -53,27 +54,12 @@ export default function Register() {
                 <form onSubmit={(e) => e.preventDefault()} className="form-login">
                   <div className="cols">
                     <div className="wow fadeInUp" data-wow-delay="0s" style={{ width: "100%" }}>
-                      <p className="fw-5 fs-15 mb-10">Je suis…</p>
-                      <div
-                        style={{
-                          display: "grid",
-                          gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
-                          gap: 10,
-                        }}
-                      >
+                      <p className="kelele-role-title">Je suis…</p>
+                      <div className="kelele-role-grid" role="radiogroup" aria-label="Type de compte">
                         {accountTypes.map((t) => (
                           <label
                             key={t.value}
-                            style={{
-                              cursor: "pointer",
-                              padding: "12px 14px",
-                              borderRadius: 12,
-                              border:
-                                type === t.value
-                                  ? "2px solid var(--Primary, #131836)"
-                                  : "1px solid #e5e5e5",
-                              display: "block",
-                            }}
+                            className={`kelele-role-card${type === t.value ? " is-active" : ""}`}
                           >
                             <input
                               type="radio"
@@ -81,14 +67,15 @@ export default function Register() {
                               value={t.value}
                               checked={type === t.value}
                               onChange={() => setType(t.value)}
-                              style={{ display: "none" }}
                             />
-                            <span className="fw-5" style={{ display: "block" }}>
-                              {t.label}
+                            <span className="kelele-role-icon">
+                              <i className={t.icon} />
                             </span>
-                            <span className="fs-14" style={{ display: "block", opacity: 0.7 }}>
-                              {t.text}
+                            <span className="kelele-role-text">
+                              <strong>{t.label}</strong>
+                              <small>{t.text}</small>
                             </span>
+                            <span className="kelele-role-check" aria-hidden="true" />
                           </label>
                         ))}
                       </div>

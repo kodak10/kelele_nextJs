@@ -105,7 +105,15 @@ export default function RootLayout({ children }) {
     });
   }, [pathname]); // Runs every time the route changes
   return (
-    <html lang="en">
+    <html lang="fr">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap"
+        />
+      </head>
       <body className="counter-scroll">
         <Context>{children}</Context>
 

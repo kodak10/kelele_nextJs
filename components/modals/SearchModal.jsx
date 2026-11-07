@@ -33,8 +33,6 @@ export default function SearchModal() {
                     name="text"
                     tabIndex={2}
                     defaultValue=""
-                    aria-required="true"
-                    required
                   />
                 </fieldset>
                 <div className="button-submit">

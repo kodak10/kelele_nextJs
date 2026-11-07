@@ -4,20 +4,11 @@ const cat = (name) => `${grid}?category=${encodeURIComponent(name)}`;
 
 export const menuItems = [
   { title: "Accueil", href: "/" },
+  // « Catégories » : méga-menu dédié, rempli dans Nav.jsx à partir des catégories gérées par l'admin
+  { title: "Catégories", id: "explore", subItems: [] },
   { title: "Prestataires", href: "/prestataires" },
   { title: "Événements", href: "/evenements" },
-  {
-    title: "Pages",
-    isActive: true,
-    subItems: [
-      { title: "Devenir prestataire", href: "/devenir-prestataire" },
-      { title: "À propos", href: "/a-propos" },
-      { title: "Contact", href: "/contact" },
-      { title: "FAQ", href: "/faq" },
-      { title: "Tarifs", href: "/tarifs" },
-      { title: "Conditions", href: "/conditions" },
-    ],
-  },
+  { title: "À propos", href: "/a-propos" },
 ];
 
 // Menu déroulant « Catégories » (header) et section catégories du menu mobile

@@ -1,20 +1,15 @@
 "use client";
 import React, { useEffect, useMemo, useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useContextElement } from "@/context/Context";
-import AddToCart from "@/components/common/AddToCart";
+import ProviderCard from "@/components/providers/ProviderCard";
 import { useCategories } from "@/components/common/useCategories";
 import {
   providers,
-  providerHref,
   providerCities,
 } from "@/data/kelele";
 
 
 export default function ProviderGrid() {
-  const { toggleWishlist, isAddedtoWishlist } = useContextElement();
   const params = useSearchParams();
   const [cats] = useCategories();
   const categoryNames = cats.map((c) => c.title);
@@ -27,6 +22,7 @@ export default function ProviderGrid() {
   useEffect(() => {
     setKeyword(params.get("q") || "");
     setCategory(params.get("category") || "");
+    setCity(params.get("city") || "");
   }, [params]);
 
   const results = useMemo(() => {
@@ -114,58 +110,7 @@ export default function ProviderGrid() {
 
               <div className="grid-list-items-5">
                 {results.map((elm) => (
-                  <div key={elm.id} className="course-item hover-img fl-item h190 kelele-course">
-                    <div className="features image-wrap">
-                      <Image
-                        className="lazyload"
-                        alt={elm.title}
-                        src={elm.imgSrc}
-                        width={520}
-                        height={380}
-                      />
-                      {elm.tag && (
-                        <div className="box-tags">
-                          <a href="#" className="item best-seller">
-                            {elm.tag}
-                          </a>
-                        </div>
-                      )}
-                      <div
-                        className={`box-wishlist tf-action-btns ${
-                          isAddedtoWishlist(elm.id) ? "active" : ""
-                        } `}
-                        onClick={() => toggleWishlist(elm.id)}
-                      >
-                        <i className="flaticon-heart" />
-                      </div>
-                    </div>
-                    <div className="content">
-                      <div className="meta">
-                        <div className="meta-item">
-                          <i className="flaticon-location" />
-                          <p>{elm.city}</p>
-                        </div>
-                        <div className="meta-item">
-                          <i className="flaticon-clock" />
-                          <p>Devis gratuit</p>
-                        </div>
-                      </div>
-                      <h6 className="fw-5 line-clamp-2">
-                        <Link href={providerHref(elm)}>{elm.title}</Link>
-                      </h6>
-                      <div className="author">
-                        {elm.filterCategories.join(", ")}
-                      </div>
-                      <div className="bottom">
-                        <div className="h6 price fw-5">Sur devis</div>
-                        <AddToCart provider={elm} />
-                        <Link href={providerHref(elm)} className="tf-btn-arrow">
-                          <span className="fw-5 fs-15">Demander un devis</span>
-                          <i className="icon-arrow-top-right" />
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
+                  <ProviderCard key={elm.id} provider={elm} />
                 ))}
               </div>
             </div>

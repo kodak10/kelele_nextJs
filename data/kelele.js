@@ -1,27 +1,6 @@
 // Contenu KELELE — source : proposition technique KELELE (sept. 2026).
 // Les éléments marqués "exemple" sont des placeholders à remplacer par des données réelles.
 
-export const keleleCategories = [
-  { imgSrc: "/images/categories/kelele/dj-animation.svg", category: "DJ & Animation", delay: "0.3s" },
-  { imgSrc: "/images/categories/kelele/traiteurs-patisserie.svg", category: "Traiteurs & Pâtisserie", delay: "0.33s" },
-  { imgSrc: "/images/categories/kelele/decoration-scenographie.svg", category: "Décoration & Scénographie", delay: "0.35s" },
-  { imgSrc: "/images/categories/kelele/photo-video.svg", category: "Photo & Vidéo", delay: "0.37s" },
-  { imgSrc: "/images/categories/kelele/salles-lieux.svg", category: "Salles & Lieux", delay: "0.4s" },
-  { imgSrc: "/images/categories/kelele/event-planners.svg", category: "Event planners", delay: "0.43s" },
-  { imgSrc: "/images/categories/kelele/artistes-musique-live.svg", category: "Artistes & Musique live", delay: "0.45s" },
-  { imgSrc: "/images/categories/kelele/billetterie-concerts.svg", category: "Billetterie & Concerts", delay: "0.47s" },
-];
-
-
-// Onglets de la section "Prestataires populaires"
-export const providerTabs = [
-  "DJ & Animation",
-  "Traiteurs & Pâtisserie",
-  "Décoration & Scénographie",
-  "Photo & Vidéo",
-  "Salles & Lieux",
-];
-
 // Exemples de fiches prestataires
 export const providers = [
   { id: 1, imgSrc: "/images/prestataires/01-dj-sonorisation.jpg", title: "DJ & Sonorisation pour mariages et soirées privées", city: "Abidjan, Côte d'Ivoire", tag: "Certifié", filterCategories: ["DJ & Animation"] },
@@ -108,3 +87,13 @@ export const eventHrefById = (id) => {
   const e = keleleEventsAll.find((x) => x.id == id) || keleleEventsAll[0];
   return `/evenements/${e.slug}`;
 };
+
+// « Explorez nos univers » (PRD 6.3) : chaque univers renvoie vers l'annuaire déjà filtré.
+export const universes = [
+  { title: "Mariages & célébrations", img: "/images/charte/univers-mariage.jpg", href: "/prestataires?q=mariage" },
+  { title: "Événements d'entreprise & MICE", img: "/images/evenements/06-forum-organisateurs.jpg", href: "/prestataires?q=entreprise" },
+  { title: "Concerts & spectacles", img: "/images/evenements/04-concert-live.jpg", href: "/prestataires?category=Artistes%20%26%20Musique%20live" },
+  { title: "Tourisme événementiel", img: "/images/charte/univers-tourisme.jpg", href: "/prestataires?category=Salles%20%26%20Lieux" },
+  { title: "Restauration & gastronomie", img: "/images/prestataires/03-traiteur-buffet.jpg", href: "/prestataires?category=Traiteurs%20%26%20P%C3%A2tisserie" },
+  { title: "Technologie & services", img: "/images/charte/media-tv.jpg", href: "/prestataires?category=Billetterie%20%26%20Concerts" },
+];

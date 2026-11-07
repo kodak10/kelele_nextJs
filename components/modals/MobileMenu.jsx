@@ -57,7 +57,7 @@ export default function MobileMenu() {
           <ul className="list-group">
             {[
               { title: "Catégories", subItems: categories, noActive: true },
-              ...menuItems,
+              ...menuItems.filter((m) => m.id !== "explore"),
             ].map((item, index) => (
               <li
                 className={`list-group-item ${

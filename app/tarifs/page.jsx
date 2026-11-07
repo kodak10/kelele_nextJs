@@ -42,7 +42,7 @@ export default function page() {
                   height: "100%",
                   padding: 28,
                   borderRadius: 16,
-                  border: p.featured ? "2px solid var(--Primary, #131836)" : "1px solid #ececec",
+                  border: p.featured ? "2px solid var(--Primary, #06090d)" : "1px solid #ececec",
                   background: "#fff",
                   display: "flex",
                   flexDirection: "column",

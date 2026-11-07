@@ -5,6 +5,8 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { providers, providerHref } from "@/data/kelele";
 import AddToCart from "@/components/common/AddToCart";
+import ProviderCard from "@/components/providers/ProviderCard";
+import CertifiedBadge from "@/components/common/CertifiedBadge";
 
 const offers = [
   "Fiche prestataire certifiée (KYC)",
@@ -82,10 +84,6 @@ export default function ProviderDetail({ slug }) {
                   <li>
                     <i className="flaticon-location" />
                     <p>{provider.city}</p>
-                  </li>
-                  <li>
-                    <i className="flaticon-check" />
-                    <p>Prestataire certifié (KYC)</p>
                   </li>
                   <li>
                     <i className="flaticon-clock" />
@@ -250,37 +248,7 @@ export default function ProviderDetail({ slug }) {
                   <Swiper {...swiperOptions} className="swiper-container slider-courses-7">
                     {providers.filter((p) => p.id !== provider.id).slice(0, 8).map((elm) => (
                       <SwiperSlide key={elm.id}>
-                        <div className="course-item hover-img title-small kelele-course">
-                          <div className="features image-wrap">
-                            <Image
-                              alt={elm.title}
-                              src={elm.imgSrc}
-                              width={520}
-                              height={380}
-                            />
-                          </div>
-                          <div className="content">
-                            <div className="meta">
-                              <div className="meta-item">
-                                <i className="flaticon-location" />
-                                <p>{elm.city}</p>
-                              </div>
-                            </div>
-                            <h6 className="fw-5 line-clamp-2">
-                              <Link href={providerHref(elm)}>{elm.title}</Link>
-                            </h6>
-                            <div className="bottom">
-                              <div className="h6 price fw-5">Sur devis</div>
-                              <Link
-                                href={providerHref(elm)}
-                                className="tf-btn-arrow"
-                              >
-                                <span className="fw-5 fs-15">Voir la fiche</span>
-                                <i className="icon-arrow-top-right" />
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
+                        <ProviderCard provider={elm} />
                       </SwiperSlide>
                     ))}
                   </Swiper>
@@ -346,6 +314,9 @@ export default function ProviderDetail({ slug }) {
                     width={520}
                     height={380}
                   />
+                  <span className="kelele-badge-on-image">
+                    <CertifiedBadge size={38} title="Prestataire certifié (KYC)" />
+                  </span>
                 </div>
                 <div className="sidebar-course-content">
                   <div className="course-price">

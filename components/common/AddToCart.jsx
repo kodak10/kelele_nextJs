@@ -39,8 +39,8 @@ export default function AddToCart({ provider, variant = "icon" }) {
         display: "inline-flex",
         alignItems: "center",
         justifyContent: "center",
-        background: inCart ? "var(--Primary, #131836)" : "#f1f1f4",
-        color: inCart ? "#fff" : "#131836",
+        background: inCart ? "var(--Primary, #06090d)" : "#f1f1f4",
+        color: inCart ? "#fff" : "#06090d",
         flexShrink: 0,
       }}
     >

@@ -1,30 +1,32 @@
 "use client";
-import {
-  featuredProviders as instructors,
-  providerHrefById,
-} from "@/data/kelele";
+import { featuredProviders, providers } from "@/data/kelele";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
-import Image from "next/image";
+import ProviderCard from "@/components/providers/ProviderCard";
+
+const featured = featuredProviders
+  .map((f) => providers.find((p) => p.id === f.providerId))
+  .filter(Boolean);
+
 export default function FeaturedProviders() {
   const options = {
     spaceBetween: 25,
     observer: true,
     observeParents: true,
     breakpoints: {
-      425: {
-        slidesPerView: 1.5,
+      0: {
+        slidesPerView: 1.1,
         spaceBetween: 15,
       },
       700: {
-        slidesPerView: 2.3,
+        slidesPerView: 2.2,
       },
       1000: {
         slidesPerView: 3,
       },
       1440: {
-        slidesPerView: 5,
+        slidesPerView: 4,
       },
     },
   };
@@ -39,7 +41,7 @@ export default function FeaturedProviders() {
               </h2>
               <div className="flex items-center justify-between flex-wrap gap-10">
                 <div className="sub fs-15 wow fadeInUp" data-wow-delay="0.1s">
-                  Des professionnels de l'événementiel, certifiés par KELELE
+                  Des professionnels de l&apos;événementiel, certifiés par KELELE
                 </div>
                 <Link
                   href={`/prestataires`}
@@ -56,48 +58,9 @@ export default function FeaturedProviders() {
               {...options}
               modules={[Navigation, Pagination]}
             >
-              {instructors.map((instructor, index) => (
-                <SwiperSlide className="swiper-slide" key={index}>
-                  <div className="instructors-item hover-img style-column kelele-instructor">
-                    <div className="image-wrap">
-                      <Image
-                        className="lazyload"
-                        data-src={instructor.imgSrc}
-                        alt={instructor.alt}
-                        src={instructor.imgSrc}
-                        width={520}
-                        height={521}
-                      />
-                    </div>
-                    <div className="entry-content">
-                      <ul className="entry-meta">
-                        <li>
-                          <i className="flaticon-user" />
-                          {instructor.city}
-                        </li>
-                        <li>
-                          <i className="flaticon-play" />
-                          Certifié (KYC)
-                        </li>
-                      </ul>
-                      <h6 className="entry-title">
-                        <Link href={providerHrefById(instructor.providerId)}>
-                          {instructor.name}
-                        </Link>
-                      </h6>
-                      <p className="short-description">
-                        {instructor.description}
-                      </p>
-                      <div className="ratings">
-                        <a
-                          href={providerHrefById(instructor.providerId)}
-                          className="tf-btn-arrow"
-                        >
-                          Demander un devis
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+              {featured.map((provider) => (
+                <SwiperSlide className="swiper-slide" key={provider.id}>
+                  <ProviderCard provider={provider} />
                 </SwiperSlide>
               ))}
             </Swiper>

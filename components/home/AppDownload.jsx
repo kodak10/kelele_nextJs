@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import PhoneTicket from "@/components/home/PhoneTicket";
 export default function AppDownload() {
   return (
     <section className="section-mobile-app style2 bg-4">
@@ -58,16 +58,7 @@ export default function AppDownload() {
             </div>
           </div>
           <div className="col-md-6">
-            <div className="image">
-              <Image
-                className="lazyload"
-                data-src="/images/section/mobile-app-3.png"
-                alt=""
-                src="/images/section/mobile-app-3.png"
-                width={1352}
-                height={991}
-              />
-            </div>
+            <PhoneTicket />
           </div>
         </div>
       </div>

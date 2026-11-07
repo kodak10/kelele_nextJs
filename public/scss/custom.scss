@@ -118,11 +118,11 @@
   display: none !important;
 }
 
-/* Header KELELE : fond bleu nuit #131836 */
+/* Header KELELE : fond noir (var(--Primary)) */
 #header_main.kelele-header {
-  border-bottom: 1px solid #131836;
+  border-bottom: 1px solid #06090d;
   .header-inner {
-    background-color: #131836;
+    background-color: #06090d;
   }
   .header-text,
   .navigation > li > a,
@@ -145,12 +145,12 @@
   .header-register .tf-button-default.active {
     background-color: var(--Secondary);
     border-color: var(--Secondary);
-    color: #131836;
+    color: #06090d;
     font-weight: 600;
     &:hover {
-      background-color: #b8973f;
-      border-color: #b8973f;
-      color: #131836;
+      background-color: #b9912f;
+      border-color: #b9912f;
+      color: #06090d;
     }
   }
   .navigation > li.has-children::after {
@@ -216,9 +216,9 @@
   }
 }
 
-/* Date des événements : couleur du header (#131836) */
+/* Date des événements : couleur du header (#06090d) */
 .kelele-events .events-item .event-item-date {
-  background-color: #131836;
+  background-color: #06090d;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -245,53 +245,6 @@
   }
 }
 
-/* Section « Devenez prestataire » */
-.section-become-instructor.kelele-become .main-section {
-  background-color: #faf8f3;
-  align-items: center;
-  .wrap-list-text-check1 {
-    flex-wrap: wrap;
-    gap: 14px 36px;
-    li {
-      margin: 0 !important;
-      flex: 0 0 auto;
-      white-space: nowrap;
-      i {
-        flex: 0 0 22px;
-        width: 22px;
-        height: 22px;
-        line-height: 22px;
-        font-size: 11px;
-        border-radius: 50%;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-      }
-    }
-  }
-  .agent-img-list .agent-img-item {
-    width: 64px;
-    height: 64px;
-    padding: 4px;
-    border-radius: 50%;
-    overflow: hidden;
-    flex-shrink: 0;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
-      display: block;
-    }
-  }
-  .agent-img-list .agent-img-item:not(:first-child) {
-    margin-left: -12px;
-  }
-  .agent-img-list .agent-img-item:last-child {
-    overflow: visible;
-    font-weight: 600;
-  }
-}
 
 /* Newsletter : bloc centré avec marges égales en haut et en bas */
 .section-form-newsletter.kelele-newsletter {
@@ -315,10 +268,6 @@
   }
 }
 
-/* Réduit l'espace sous « Devenez prestataire » (avant la newsletter) */
-.section-become-instructor.kelele-become {
-  padding-bottom: 50px;
-}
 
 /* « Ce que disent nos utilisateurs » : même fond que « Événements à venir » */
 .section-saying.kelele-saying,
@@ -375,5 +324,1598 @@
   .event-item-sub {
     flex-wrap: wrap;
     gap: 6px 16px;
+  }
+}
+
+/* =========================================================
+   CHARTE GRAPHIQUE KELELE (d'après la maquette du PRD V1)
+   Noir #06090d · Or #d7ad49 · Crème #faf8f3 · titres en serif
+   ========================================================= */
+
+/* Typographie : titres en serif élégant, texte en DM Sans */
+h1,
+h2,
+h3,
+h4,
+.font-cardo,
+.font-outfit,
+.heading-section h2,
+.page-title h2 {
+  font-family: "Playfair Display", "Cardo", Georgia, serif !important;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+h5,
+h6 {
+  font-family: "DM Sans", sans-serif;
+}
+
+/* Boutons : pilules, or avec texte sombre (comme la maquette) */
+.tf-btn {
+  border-radius: 999px;
+  background-color: var(--Secondary);
+  border-color: var(--Secondary);
+  color: var(--Primary);
+  font-weight: 600;
+  &:hover {
+    background-color: var(--Gold-dark);
+    border-color: var(--Gold-dark);
+    color: var(--Primary);
+  }
+  &.style-secondary {
+    background-color: transparent;
+    border-color: var(--Secondary);
+    color: var(--Primary);
+    &:hover {
+      background-color: var(--Secondary);
+      color: var(--Primary);
+    }
+  }
+}
+.tf-button-default {
+  border-radius: 999px;
+}
+.tf-btn-arrow {
+  color: var(--Primary);
+  &:hover {
+    color: var(--Gold-dark);
+  }
+}
+
+/* Cartes : coins arrondis, fine bordure chaude */
+.course-item,
+.instructors-item,
+.categories-item,
+.events-item {
+  border-radius: 16px;
+}
+.categories-item,
+.events-item {
+  border-color: #eadfc8;
+}
+
+/* En-tête : l'or ressort sur le noir */
+#header_main.kelele-header {
+  .navigation > li > a.activeMenu,
+  .navigation > li > a:hover {
+    color: var(--Secondary) !important;
+  }
+  .header-login .tf-button-default {
+    border-radius: 999px;
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  .header-register .tf-button-default,
+  .header-register .tf-button-default.active {
+    border-radius: 999px;
+  }
+}
+
+/* Pied de page : noir avec accents or */
+.footer {
+  background-color: var(--Primary);
+  color: rgba(255, 255, 255, 0.72);
+  .footer-wrap,
+  .footer-body,
+  .footer-body-wrap {
+    background-color: transparent;
+  }
+  h5,
+  .footer-menu-list h5 {
+    color: var(--Secondary);
+  }
+  p,
+  li,
+  .address li p,
+  .footer-more-infor p {
+    color: rgba(255, 255, 255, 0.72);
+  }
+  a {
+    color: rgba(255, 255, 255, 0.85);
+    &:hover {
+      color: var(--Secondary);
+    }
+  }
+  .icon,
+  .address .icon {
+    color: var(--Secondary);
+  }
+  input {
+    background: transparent;
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.3);
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.55);
+    }
+  }
+  .footer-bottom {
+    background-color: transparent;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    p {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+
+/* =========================================================
+   SECTIONS DE LA MAQUETTE (PRD V1) : hero, univers, pro, pied de page
+   ========================================================= */
+
+/* ---- Explorez nos univers ---- */
+.kelele-universes {
+  background: #faf8f3;
+  padding: 70px 0 80px;
+  .kelele-universes-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 28px;
+    h2 {
+      margin: 0 0 6px;
+    }
+    p {
+      margin: 0;
+      color: var(--Soft-Text);
+    }
+  }
+}
+.kelele-link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: var(--Primary);
+  &:hover {
+    color: var(--Gold-dark);
+  }
+}
+.kelele-universes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  @media (max-width: 1100px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 560px) {
+    grid-template-columns: 1fr;
+  }
+}
+.kelele-universe-card {
+  display: block;
+  background: #fff;
+  border: 1px solid #eee3cc;
+  border-radius: 16px;
+  padding: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(6, 9, 13, 0.1);
+    .kelele-round-btn {
+      background: var(--Secondary);
+      border-color: var(--Secondary);
+    }
+  }
+  .kelele-universe-img {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 12px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .kelele-universe-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 14px 6px 6px;
+    h6 {
+      margin: 0 0 4px;
+      color: var(--Primary);
+    }
+    span {
+      font-size: 13px;
+      color: var(--Soft-Text);
+    }
+  }
+}
+.kelele-round-btn {
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid #e3d9c2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--Primary) !important;
+  transition: background 0.2s;
+}
+
+/* ---- Pour les professionnels : bloc sombre ---- */
+.kelele-pro {
+  position: relative;
+  background: #06090d;
+  color: #fff;
+  overflow: hidden;
+  padding: 90px 0;
+  .kelele-pro-photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 46%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, #06090d 0%, rgba(6, 9, 13, 0.6) 35%, rgba(6, 9, 13, 0) 70%);
+    }
+  }
+  .tf-container {
+    position: relative;
+    z-index: 2;
+  }
+  .kelele-pro-content {
+    max-width: 600px;
+    h2 {
+      color: #fff;
+      font-size: clamp(30px, 3.4vw, 46px);
+      line-height: 1.12;
+      margin-bottom: 16px;
+    }
+    p {
+      color: rgba(255, 255, 255, 0.82);
+      max-width: 520px;
+      margin-bottom: 26px;
+    }
+  }
+  @media (max-width: 992px) {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 60px 0 0;
+    .kelele-pro-photo {
+      position: relative;
+      width: 100%;
+      height: 340px;
+      margin-top: 40px;
+      &::after {
+        background: linear-gradient(180deg, #06090d 0%, rgba(6, 9, 13, 0) 40%);
+      }
+    }
+  }
+}
+.kelele-tag {
+  display: inline-block;
+  border: 1px solid var(--Secondary);
+  color: var(--Secondary);
+  background: rgba(215, 173, 73, 0.14);
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.kelele-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 34px 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 24px;
+  @media (max-width: 560px) {
+    grid-template-columns: 1fr;
+  }
+  li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.88);
+  }
+}
+.kelele-benefit-icon {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--Secondary);
+  border-radius: 10px;
+  color: var(--Secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---- Pied de page ---- */
+.kelele-footer {
+  background: #06090d;
+  padding: 50px 0 28px;
+  border-top: 0;
+  .kelele-footer-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-bottom: 26px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .kelele-footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 26px;
+    a {
+      color: #fff;
+      font-size: 14px;
+      &:hover {
+        color: var(--Secondary);
+      }
+    }
+  }
+  .kelele-footer-social {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    a {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      &:hover {
+        border-color: var(--Secondary);
+        color: var(--Secondary);
+      }
+    }
+  }
+  .kelele-footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 22px;
+    p {
+      margin: 0;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+    .kelele-signature {
+      font-family: "Playfair Display", Georgia, serif;
+      font-style: italic;
+      font-size: 17px;
+      color: var(--Secondary);
+    }
+  }
+}
+
+/* Badge « certifié » : sceau doré (remplace le texte) */
+.kelele-cert-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  filter: drop-shadow(0 2px 5px rgba(6, 9, 13, 0.35));
+  cursor: help;
+}
+.box-tags .kelele-cert-badge {
+  position: relative;
+}
+
+/* =========================================================
+   MAQUETTE (PRD V1) — passe 2 : hero photo, univers x6, pro + app,
+   bandeau confiance, univers éditoriaux, en-tête
+   ========================================================= */
+
+/* ---- En-tête : logo | navigation centrée | actions ---- */
+#header_main.kelele-header {
+  .header-inner-wrap {
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .header-left {
+    flex: 0 0 auto;
+    flex-grow: 0;
+  }
+  .main-menu {
+    margin: 0 auto;
+  }
+  .navigation {
+    gap: 30px;
+    > li > a {
+      font-size: 14px;
+    }
+  }
+  .kelele-search-trigger {
+    color: #fff;
+  }
+}
+
+/* ---- Hero ---- */
+.kelele-hero2 {
+  position: relative;
+  background: #06090d;
+  color: #fff;
+  overflow: hidden;
+  .tf-container {
+    position: relative;
+    z-index: 2;
+  }
+  .kelele-hero2-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    min-height: 560px;
+    padding: 70px 0;
+  }
+  .kelele-hero2-content {
+    max-width: 640px;
+  }
+  .kelele-eyebrow {
+    color: var(--Secondary);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 18px;
+  }
+  h1 {
+    color: #fff;
+    font-size: clamp(38px, 4.6vw, 64px);
+    line-height: 1.07;
+    margin-bottom: 20px;
+  }
+  .kelele-gold {
+    color: var(--Secondary);
+  }
+  .kelele-lead {
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 17px;
+    line-height: 1.6;
+    max-width: 500px;
+    margin-bottom: 30px;
+  }
+  .kelele-search {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 4px;
+    background: #fff;
+    border-radius: 999px;
+    padding: 8px 8px 8px 20px;
+    max-width: 700px;
+    margin-bottom: 24px;
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.4);
+    > input {
+      flex: 1 1 0;
+      min-width: 0;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      color: var(--Primary);
+      padding: 10px 8px;
+    }
+    .kelele-search-icon {
+      color: #8a8f9a;
+    }
+    .kelele-search-field {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 0;
+      padding: 0 10px;
+      border-left: 1px solid #e7e2d6;
+      color: var(--Primary);
+      i {
+        color: #8a8f9a;
+        font-size: 14px;
+      }
+      select,
+      input {
+        border: 0;
+        outline: 0;
+        background: transparent;
+        color: var(--Primary);
+        font-size: 14px;
+        padding: 8px 0;
+        max-width: 125px;
+      }
+    }
+  }
+  .kelele-search-btn {
+    flex: 0 0 46px;
+    width: 46px;
+    height: 46px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--Secondary);
+    color: var(--Primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &:hover {
+      background: var(--Gold-dark);
+    }
+  }
+  .kelele-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .kelele-outline {
+    background: transparent !important;
+    border-color: rgba(255, 255, 255, 0.7) !important;
+    color: #fff !important;
+    &:hover {
+      background: #fff !important;
+      color: var(--Primary) !important;
+    }
+  }
+  .kelele-hero2-stats {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    flex: 0 0 auto;
+    li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 18px 12px 12px;
+      border-radius: 14px;
+      background: rgba(6, 9, 13, 0.45);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      strong {
+        display: block;
+        font-size: 22px;
+        line-height: 1.1;
+        font-weight: 600;
+        color: #fff;
+      }
+      span {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.78);
+      }
+    }
+    .kelele-stat-icon {
+      flex: 0 0 42px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid var(--Secondary);
+      color: var(--Secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+  }
+  @media (max-width: 992px) {
+    .kelele-hero2-stats {
+      display: none;
+    }
+    .kelele-hero2-inner {
+      min-height: 0;
+      padding: 50px 0 60px;
+    }
+    .kelele-search {
+      flex-wrap: wrap;
+      border-radius: 24px;
+      padding: 12px;
+      .kelele-search-field {
+        border-left: 0;
+        padding: 0 6px;
+      }
+    }
+  }
+}
+
+/* ---- Univers : 6 cartes sur une ligne ---- */
+.kelele-universes-grid {
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 700px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 460px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Pour les professionnels : contenu + carte application ---- */
+.kelele-pro {
+  .kelele-pro-grid {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  .kelele-pro-content {
+    flex: 1 1 52%;
+    max-width: 560px;
+  }
+  .kelele-pro-photo {
+    width: 40%;
+    left: 28%;
+    right: auto;
+    &::after {
+      background: linear-gradient(90deg, #06090d 0%, rgba(6, 9, 13, 0.1) 45%, rgba(6, 9, 13, 0.15) 70%, #06090d 100%);
+    }
+  }
+  @media (max-width: 1200px) {
+    .kelele-pro-photo {
+      opacity: 0.5;
+    }
+  }
+}
+.kelele-app-card {
+  flex: 0 0 34%;
+  align-self: center;
+  position: relative;
+  background: #faf8f3;
+  color: var(--Primary);
+  border-radius: 20px;
+  padding: 26px 26px 0;
+  display: flex;
+  gap: 18px;
+  overflow: hidden;
+  min-height: 300px;
+  z-index: 3;
+  .kelele-app-text {
+    flex: 1 1 auto;
+    padding-bottom: 26px;
+  }
+  h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: var(--Primary);
+  }
+  .kelele-app-sub {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: var(--Primary);
+  }
+  .kelele-app-soon {
+    font-size: 13px;
+    color: var(--Soft-Text);
+    margin-bottom: 16px;
+  }
+  .kelele-app-ok {
+    font-size: 13px;
+    font-weight: 500;
+    color: #16794a;
+  }
+  .kelele-app-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    input {
+      border: 1px solid #e3d9c2;
+      border-radius: 10px;
+      padding: 10px 12px;
+      background: #fff;
+      color: var(--Primary);
+    }
+    button {
+      border: 0;
+      border-radius: 999px;
+      padding: 10px 16px;
+      background: var(--Primary);
+      color: #fff;
+      font-weight: 500;
+      cursor: pointer;
+      &:hover {
+        background: var(--Secondary);
+        color: var(--Primary);
+      }
+    }
+  }
+  @media (max-width: 992px) {
+    flex: 1 1 auto;
+    margin-top: 10px;
+  }
+}
+.kelele-pro .kelele-pro-grid {
+  @media (max-width: 992px) {
+    flex-direction: column;
+  }
+}
+.kelele-phone {
+  flex: 0 0 120px;
+  align-self: flex-end;
+  width: 120px;
+  height: 250px;
+  background: #0b0f15;
+  border-radius: 22px 22px 0 0;
+  padding: 6px 6px 0;
+  box-shadow: 0 0 0 2px #2a2f38;
+  .kelele-phone-screen {
+    height: 100%;
+    background: #fff;
+    border-radius: 16px 16px 0 0;
+    padding: 8px;
+    overflow: hidden;
+  }
+  .kelele-phone-logo {
+    display: flex;
+    justify-content: center;
+    background: #0b0f15;
+    border-radius: 8px;
+    padding: 4px 0;
+    margin-bottom: 6px;
+  }
+  .kelele-phone-search {
+    font-size: 8px;
+    color: #8a8f9a;
+    border: 1px solid #e6e1d3;
+    border-radius: 999px;
+    padding: 3px 7px;
+    margin-bottom: 6px;
+  }
+  .kelele-phone-icons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    span {
+      width: 20px;
+      height: 20px;
+      border-radius: 6px;
+      background: #f5efe0;
+      color: #b9912f;
+      font-size: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .kelele-phone-title {
+    font-size: 8px;
+    font-weight: 600;
+    margin: 0 0 4px;
+    color: var(--Primary);
+  }
+  .kelele-phone-cards {
+    display: grid;
+    gap: 4px;
+    img {
+      width: 100%;
+      height: 46px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+  }
+}
+
+/* ---- Bandeau confiance ---- */
+.kelele-trust {
+  background: #faf8f3;
+  padding: 30px 0;
+  .kelele-trust-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .kelele-trust-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1 1 560px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    li {
+      text-align: center;
+      padding: 0 10px;
+      border-right: 1px solid #e9e1cf;
+      &:last-child {
+        border-right: 0;
+      }
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        color: var(--Primary);
+        font-size: 13px;
+        line-height: 1.35;
+        i {
+          font-size: 24px;
+          color: var(--Primary);
+        }
+        &:hover i {
+          color: var(--Gold-dark);
+        }
+      }
+    }
+    @media (max-width: 900px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px 0;
+    }
+  }
+  .kelele-trust-card {
+    flex: 0 0 300px;
+    min-height: 100px;
+    border-radius: 14px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    color: #fff;
+    background: linear-gradient(90deg, rgba(6, 9, 13, 0.85), rgba(6, 9, 13, 0.45)),
+      url("/images/prestataires/08-salle-reception.jpg") center / cover;
+    p {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.25;
+      font-family: "Playfair Display", Georgia, serif;
+      color: #fff;
+    }
+    span {
+      font-size: 13px;
+      color: var(--Secondary);
+    }
+  }
+}
+
+/* ---- Médias / Awards / Academy ---- */
+.kelele-media {
+  background: #06090d;
+  padding: 50px 0 60px;
+  .kelele-media-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .kelele-media-card {
+    border: 1px solid rgba(215, 173, 73, 0.35);
+    border-radius: 16px;
+    overflow: hidden;
+    background: #0b0f15;
+  }
+  .kelele-media-img {
+    aspect-ratio: 16 / 7;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.85;
+    }
+  }
+  .kelele-media-body {
+    padding: 18px 22px 22px;
+    h4 {
+      color: #fff;
+      font-family: "Playfair Display", Georgia, serif;
+      margin-bottom: 6px;
+    }
+    p {
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+  }
+  .kelele-media-soon {
+    color: var(--Secondary);
+    font-size: 13px;
+    font-weight: 500;
+  }
+}
+
+/* ---- Hero (passe 3) : décor doré + portrait fondu, comme la maquette ---- */
+.kelele-hero2 {
+  background: #06090d;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: url("/images/charte/hero-bg.jpg") center 32% / cover no-repeat;
+    opacity: 0.55;
+    filter: saturate(1.15);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: linear-gradient(90deg, #06090d 0%, rgba(6, 9, 13, 0.72) 30%, rgba(6, 9, 13, 0.25) 65%, rgba(6, 9, 13, 0.45) 100%);
+  }
+  .kelele-hero2-inner {
+    padding-top: 150px;
+    padding-bottom: 70px;
+    min-height: 640px;
+  }
+  .kelele-search .kelele-search-field {
+    border-left: 0;
+    background: #f4f1ea;
+    border-radius: 999px;
+    padding: 6px 14px;
+    margin-left: 4px;
+  }
+  @media (max-width: 992px) {
+    .kelele-hero2-inner {
+      padding-top: 120px;
+      min-height: 0;
+    }
+  }
+}
+
+/* ---- En-tête transparent sur l'accueil, noir après défilement ---- */
+#header_main.kelele-header.kelele-header-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom-color: transparent;
+  .header-inner {
+    background: linear-gradient(180deg, rgba(6, 9, 13, 0.88), rgba(6, 9, 13, 0));
+    transition: background 0.25s ease;
+  }
+  &.is-scrolled {
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+    .header-inner {
+      background: #06090d;
+    }
+  }
+}
+
+/* ---- Univers : cartes plus proches de la maquette ---- */
+.kelele-universe-card .kelele-universe-body h6 {
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+/* Badge « certifié » : toujours posé sur l'image du prestataire */
+.kelele-badge-on-image {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 3;
+  line-height: 0;
+}
+.instructors-item .image-wrap,
+.sidebar-course .widget-video {
+  position: relative;
+}
+
+/* ---- Hero : vidéo d'arrière-plan ---- */
+.kelele-hero2 {
+  .kelele-hero2-video {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+  }
+  &::before {
+    opacity: 0.45;
+  }
+  &::after {
+    background: linear-gradient(90deg, rgba(6, 9, 13, 0.92) 0%, rgba(6, 9, 13, 0.68) 32%, rgba(6, 9, 13, 0.3) 66%, rgba(6, 9, 13, 0.5) 100%);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .kelele-hero2-video {
+      display: none;
+    }
+  }
+}
+
+/* ---- Rayons de bordure réduits (boutons, champs, cartes) ---- */
+.tf-btn,
+.tf-button-default,
+#header_main.kelele-header .header-login .tf-button-default,
+#header_main.kelele-header .header-register .tf-button-default,
+#header_main.kelele-header .header-register .tf-button-default.active {
+  border-radius: 10px;
+}
+.kelele-hero2 {
+  .kelele-search {
+    border-radius: 14px;
+    .kelele-search-field {
+      border-radius: 10px;
+    }
+  }
+  .kelele-search-btn {
+    border-radius: 10px;
+  }
+  .kelele-hero2-stats li {
+    border-radius: 10px;
+  }
+  @media (max-width: 992px) {
+    .kelele-search {
+      border-radius: 14px;
+    }
+  }
+}
+.course-item,
+.instructors-item,
+.categories-item,
+.events-item,
+.kelele-universe-card,
+.kelele-media-card {
+  border-radius: 12px;
+}
+.kelele-universe-card .kelele-universe-img {
+  border-radius: 8px;
+}
+.kelele-app-card {
+  border-radius: 14px;
+}
+.kelele-trust .kelele-trust-card {
+  border-radius: 10px;
+}
+.kelele-round-btn {
+  border-radius: 10px;
+}
+
+/* ---- Méga-menu « Catégories » ---- */
+#header_main.kelele-header .navigation > li.kelele-mega-item {
+  position: relative;
+  .kelele-mega-panel {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-35%);
+    width: min(880px, 92vw);
+    background: #fff;
+    border: 1px solid #eee3cc;
+    border-radius: 12px;
+    box-shadow: 0 18px 40px rgba(6, 9, 13, 0.25);
+    padding: 20px 24px 24px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 50;
+    line-height: 1.4;
+  }
+  &:hover .kelele-mega-panel,
+  &:focus-within .kelele-mega-panel {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .kelele-mega-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #f0e8d6;
+    strong {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 18px;
+      color: var(--Primary);
+    }
+    a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--Gold-dark) !important;
+    }
+  }
+  .kelele-mega-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px 22px;
+  }
+  .kelele-mega-col {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    a {
+      color: var(--Primary) !important;
+      line-height: 1.35;
+      &:hover {
+        color: var(--Gold-dark) !important;
+      }
+    }
+    .kelele-mega-title {
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .kelele-mega-sub {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--Soft-Text) !important;
+    }
+  }
+}
+
+/* ---- Hero : champs ville / date (pastilles) ---- */
+.kelele-hero2 {
+  .kelele-search {
+    .kelele-search-field {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 118px;
+      padding: 0 14px;
+      height: 46px;
+      margin: 0 0 0 4px;
+      background: #f4f1ea;
+      border: 1px solid #ebe5d6;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+      &:hover,
+      &:focus-within {
+        background: #efe9da;
+        border-color: var(--Secondary);
+      }
+      .kelele-field-icon {
+        color: var(--Gold-dark);
+        font-size: 15px;
+      }
+      .kelele-field-value {
+        flex: 1 1 auto;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--Primary);
+        white-space: nowrap;
+        &.is-placeholder {
+          color: #7a7f8a;
+          font-weight: 400;
+        }
+      }
+      .kelele-field-caret {
+        font-size: 8px;
+        color: #7a7f8a;
+      }
+      select,
+      input[type="date"] {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        opacity: 0;
+        cursor: pointer;
+        padding: 0;
+        border: 0;
+      }
+      input[type="date"]::-webkit-calendar-picker-indicator {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/* Méga-menu « Catégories » : version compacte */
+#header_main.kelele-header .navigation > li.kelele-mega-item {
+  .kelele-mega-panel {
+    width: min(760px, 92vw);
+    padding: 12px 18px 14px;
+    transform: translateX(-30%);
+    &,
+    * {
+      line-height: 1.35 !important;
+    }
+    a {
+      height: auto !important;
+      display: inline-block;
+    }
+  }
+  .kelele-mega-head {
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+    strong {
+      font-size: 15px;
+    }
+    a {
+      font-size: 12px;
+    }
+  }
+  .kelele-mega-grid {
+    gap: 12px 18px;
+  }
+  .kelele-mega-col {
+    gap: 3px;
+    .kelele-mega-title {
+      font-size: 13px;
+    }
+    .kelele-mega-sub {
+      font-size: 12px;
+    }
+  }
+}
+
+/* ---- Menu déroulant « ville » personnalisé ---- */
+.kelele-hero2 .kelele-search {
+  .kelele-dropdown {
+    position: relative;
+    z-index: 5;
+  }
+  button.kelele-search-field {
+    font: inherit;
+    text-align: left;
+    .kelele-field-caret {
+      transition: transform 0.2s;
+      &.is-open {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .kelele-dropdown-list {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 4px;
+    min-width: 190px;
+    list-style: none;
+    margin: 0;
+    padding: 6px;
+    background: #fff;
+    border: 1px solid #eee3cc;
+    border-radius: 10px;
+    box-shadow: 0 16px 36px rgba(6, 9, 13, 0.28);
+    li {
+      margin: 0;
+    }
+    button {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border: 0;
+      border-radius: 8px;
+      background: transparent;
+      color: var(--Primary);
+      font-size: 14px;
+      text-align: left;
+      cursor: pointer;
+      i {
+        color: var(--Gold-dark);
+        font-size: 14px;
+      }
+      &:hover {
+        background: #f6f1e4;
+      }
+      &.is-active {
+        background: #f6f1e4;
+        font-weight: 600;
+      }
+      .kelele-dd-check {
+        margin-left: auto;
+        color: var(--Primary);
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+/* ---- Fenêtre de recherche : version compacte ---- */
+.offcanvas-search {
+  .offcanvas-body {
+    padding: 22px 0;
+  }
+  .form-search-courses {
+    max-width: 640px;
+    margin: 0 auto;
+    fieldset input {
+      height: 52px;
+      padding-left: 52px;
+      padding-right: 62px;
+      font-size: 14px;
+      border-radius: 10px;
+    }
+    .icon {
+      left: 18px;
+      i {
+        font-size: 18px;
+      }
+    }
+    .button-submit {
+      right: 6px;
+      button {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+/* ---- Connexion / inscription : lisibilité ---- */
+.login-wrap {
+  .img-left {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(6, 9, 13, 0) 35%, rgba(6, 9, 13, 0.85) 100%);
+      pointer-events: none;
+    }
+    img {
+      display: block;
+      border-radius: 12px;
+    }
+    .blockquite {
+      z-index: 2;
+      p {
+        color: #fff;
+      }
+    }
+  }
+  /* bouton principal : or avec texte sombre (le noir sur noir était illisible) */
+  .form-login .button-submit,
+  .form-login button[type="submit"],
+  .form-login .tf-btn {
+    background-color: var(--Secondary) !important;
+    border-color: var(--Secondary) !important;
+    color: var(--Primary) !important;
+    font-weight: 600;
+    &:hover {
+      background-color: var(--Gold-dark) !important;
+      border-color: var(--Gold-dark) !important;
+    }
+  }
+}
+
+/* ---- Inscription : choix du type de compte ---- */
+.kelele-role-title {
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.kelele-role-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+.kelele-role-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px 14px 16px;
+  margin: 0;
+  background: #fff;
+  border: 1px solid #e6e1d3;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+  input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  &:hover {
+    border-color: var(--Secondary);
+    background: #fdfbf5;
+  }
+  &:focus-within {
+    box-shadow: 0 0 0 3px rgba(215, 173, 73, 0.3);
+  }
+  .kelele-role-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: #f6f0df;
+    color: var(--Gold-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: background 0.2s, color 0.2s;
+  }
+  .kelele-role-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    strong {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--Primary);
+    }
+    small {
+      font-size: 12.5px;
+      line-height: 1.4;
+      color: var(--Soft-Text);
+    }
+  }
+  .kelele-role-check {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1.5px solid #cfc8b6;
+    background: #fff;
+    transition: all 0.2s;
+  }
+  &.is-active {
+    border-color: var(--Secondary);
+    background: #fdf8ea;
+    box-shadow: 0 0 0 1px var(--Secondary);
+    .kelele-role-icon {
+      background: var(--Secondary);
+      color: var(--Primary);
+    }
+    .kelele-role-check {
+      border-color: var(--Secondary);
+      background: var(--Secondary);
+      &::after {
+        content: "";
+        position: absolute;
+        left: 5px;
+        top: 2px;
+        width: 4px;
+        height: 8px;
+        border: solid var(--Primary);
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+/* ---- Bande QR : téléphone avec billet ---- */
+.kelele-phone-ticket {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: 420px;
+  padding-top: 30px;
+  .kelele-pt-glow {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(215, 173, 73, 0.28), rgba(215, 173, 73, 0) 70%);
+    z-index: 0;
+  }
+  .kelele-pt-phone {
+    position: relative;
+    z-index: 1;
+    width: 250px;
+    height: 420px;
+    background: #0b0f15;
+    border-radius: 34px 34px 0 0;
+    padding: 10px 10px 0;
+    box-shadow: 0 0 0 2px #2a2f38, 0 24px 50px rgba(6, 9, 13, 0.35);
+  }
+  .kelele-pt-notch {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 16px;
+    border-radius: 0 0 12px 12px;
+    background: #0b0f15;
+    z-index: 3;
+  }
+  .kelele-pt-screen {
+    height: 100%;
+    background: #faf8f3;
+    border-radius: 26px 26px 0 0;
+    padding: 26px 14px 0;
+    overflow: hidden;
+  }
+  .kelele-pt-top {
+    display: flex;
+    justify-content: center;
+    background: #06090d;
+    border-radius: 10px;
+    padding: 6px 0;
+    margin-bottom: 12px;
+  }
+  .kelele-pt-card {
+    background: #fff;
+    border: 1px solid #eee3cc;
+    border-radius: 12px;
+    padding: 14px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(6, 9, 13, 0.08);
+  }
+  .kelele-pt-event {
+    margin: 0;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #06090d;
+  }
+  .kelele-pt-meta {
+    margin: 2px 0 12px;
+    font-size: 11px;
+    color: #6b6f7a;
+  }
+  .kelele-pt-qr {
+    width: 150px;
+    height: 150px;
+    border: 6px solid #fff;
+    outline: 1px solid #eee3cc;
+    border-radius: 4px;
+  }
+  .kelele-pt-valid {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: #e6f6ec;
+    color: #16794a;
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .kelele-pt-bar {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 14px;
+    span {
+      width: 34px;
+      height: 6px;
+      border-radius: 3px;
+      background: #e6dfcb;
+    }
   }
 }

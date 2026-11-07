@@ -64,7 +64,7 @@ const TABLE_CSS = `
 .kt-table{width:100%;border-collapse:separate;border-spacing:0;min-width:540px}
 .kt-table th{padding:13px 22px;text-align:left;font-weight:500;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:#6b6f85;background:#f7f7fa;border-bottom:1px solid #ececf1;white-space:nowrap;user-select:none}
 .kt-table th.kt-sortable{cursor:pointer}
-.kt-table th.kt-sortable:hover{color:#131836}
+.kt-table th.kt-sortable:hover{color:#06090d}
 .kt-table td{padding:15px 22px;font-size:15px;border-bottom:1px solid #f2f2f6;vertical-align:middle}
 .kt-table tbody tr:last-child td{border-bottom:0}
 .kt-table tbody tr:hover td{background:#fdf6f3}
@@ -397,10 +397,10 @@ function ReasonHost() {
 
 function IconBtn({ icon, title, onClick, variant = "primary", disabled }) {
   const styles = {
-    primary: { background: "var(--Primary, #131836)", color: "#fff" },
+    primary: { background: "var(--Primary, #06090d)", color: "#fff" },
     success: { background: "#e6f6ec", color: "#16794a" },
     danger: { background: "#fdeaea", color: "#c0392b" },
-    neutral: { background: "#f1f1f4", color: "#131836" },
+    neutral: { background: "#f1f1f4", color: "#06090d" },
   };
   return (
     <button
@@ -1149,7 +1149,7 @@ function Kpis({ kpis }) {
               height: 52,
               flexShrink: 0,
               borderRadius: "50%",
-              background: "#f7f0da",
+              background: "#f6ecd2",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -1162,7 +1162,7 @@ function Kpis({ kpis }) {
             <h6 className="fs-15" style={{ margin: 0 }}>
               {k.label}
             </h6>
-            <span className="fs-26 fw-5" style={{ color: "var(--Secondary, #c9a84c)" }}>
+            <span className="fs-26 fw-5" style={{ color: "var(--Secondary, #d7ad49)" }}>
               {k.value}
             </span>
           </div>
