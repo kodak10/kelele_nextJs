@@ -54,7 +54,7 @@ jobs:
           protocol: ftps
           security: loose
           local-dir: ./out/
-          server-dir: ${{ vars.FTP_DIR || './' }}
+          server-dir: ${{ vars.FTP_DIR || 'public_html/kelele/' }}
 
       - name: Déploiement ignoré (identifiants FTP absents)
         if: ${{ env.FTP_PASSWORD == '' }}

@@ -69,7 +69,7 @@ Les identifiants ne sont **jamais** dans le dépôt. À définir une fois dans G
 | Secret | `FTP_SERVER` | `ftp.groupadvice.net` |
 | Secret | `FTP_USERNAME` | l'identifiant FTP |
 | Secret | `FTP_PASSWORD` | le mot de passe FTP |
-| Variable (optionnelle) | `FTP_DIR` | dossier cible sur le serveur, ex. `/public_html/` (par défaut : racine du compte FTP) |
+| Variable (optionnelle) | `FTP_DIR` | dossier cible, relatif à la racine du compte FTP. Par défaut : `public_html/kelele/` (sous-domaine kelele.groupadvice.net) |
 
 Sans ces secrets, le workflow construit le site mais n'envoie rien (un avertissement s'affiche).
 Il peut aussi être lancé à la main : *Actions → Déploiement → Run workflow*.
